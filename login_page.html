@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>LogIn - GenCode</title>
+    <link rel="stylesheet" href="/css/reg_log_style.css" />
+  </head>
+  <body>
+    <main>
+      <section class="logo">
+        <img src="/images/logo.png" alt="logo" />
+      </section>
+
+      <section class="register_form">
+        <p class="large_font"><strong>Welcome back !</strong></p>
+        <p>Please input your details below to log in</p>
+        <form>
+          <label>Email Address</label><br />
+          <input
+            class="input_f input_button"
+            type="email"
+            placeholder="Enter Email Address"
+            required
+          /><br />
+
+          <label>Password</label><br />
+          <input
+            class="input_f input_button"
+            type="password"
+            placeholder=" Enter Password"
+            required
+          /><br />
+
+          <input
+            type="checkbox"
+            id="remember_password"
+            name="remember_password"
+            value="remember"
+          />
+          <label for="remember_password">Remember password</label>
+
+          <input
+            class="input_b input_button submit_button"
+            id="submit_login"
+            type="submit"
+            value="Log in"
+          />
+        </form>
+
+        <p class="center-text">OR</p>
+
+        <button class="input_b input_button google_button" type="button">
+          Continue with Google
+        </button>
+
+        <div class="hasAcct">
+          <p class="center-text">
+            Don't have an account?
+            <a href="/registration_page.html">Register</a>
+          </p>
+        </div>
+      </section>
+    </main>
+  </body>
+</html>

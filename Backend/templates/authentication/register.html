@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Register - GenCode</title>
+    {% load static %}
+    <link rel="stylesheet" href="{% static '/css/style.css' %}"/>
+  </head>
+  <body>
+    <main>
+      <section class="logo">
+        <img src="{% static '/images/logo.png' %}" alt="logo" />
+      </section>
+
+      <section class="register_form">
+        <p class="large_font"><strong>Register</strong></p>
+        <p>Please input your details below to register</p>
+        <form action="/register" method="post">
+          {% csrf_token %}
+          
+          <label>Username</label><br />
+          <input
+            class="input_f input_button"
+            type="text"
+            id="username"
+            name="username"
+            placeholder="First name"
+            required
+          /><br />
+          <label>First name</label><br />
+          <input
+            class="input_f input_button"
+            type="text"
+            id="fname"
+            name="fname"
+            placeholder="First name"
+            required
+          /><br />
+
+          <label>Last name</label><br />
+          <input
+            class="input_f input_button"
+            type="text"
+            id="lname"          name="lname"
+            placeholder="Last name"
+            required
+          /><br />
+
+          <label>Email Address</label><br />
+          <input
+            class="input_f input_button"
+            type="email"
+            id="email"
+            name="email"
+            placeholder="Enter Email Address"
+            required
+          /><br />
+
+          <label>Password</label><br />
+          <input
+            class="input_f input_button"
+            type="password"
+            id="pass1"
+            name="pass1"
+            placeholder=" Enter Password"
+            required
+          /><br />
+          <input
+            class="input_b input_button submit_button"
+            id="submit_login"
+            type="submit"
+            value="Register"
+          />
+         
+        </form>
+
+        <p class="center-text">OR</p>
+
+        <button class="input_b input_button google_button" type="button">
+          Continue with Google
+        </button>
+
+        <div class="hasAcct">
+          <p class="center-text">
+            Already have a Gencode account?
+            <a href="/signin">Log in</a>
+          </p>
+        </div>
+      </section>
+    </main>
+  </body>
+</html>

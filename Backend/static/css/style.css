@@ -1,0 +1,101 @@
+@import url('https://fonts.googleapis.com/css2?family=Outfit&display=swap');
+
+body{
+    margin: 2.5em 4em;
+    font-size: 0.8rem;
+    background-color: #f2fafd; /* font #2d6070 button #82b5c6 borderline #7fbac3 */
+    color: #153037;
+    font-family: Outfit;
+}
+main{
+    display:flex;
+    margin-left: 5%;
+}
+
+section.logo{
+    width: 15%;
+}
+section.logo img{
+    width:100%;
+}
+
+section.register_form {
+    width:40%;
+    margin-left: 15%;
+
+}
+section.register_form form {
+    margin-top: 3em;
+
+}
+
+section.register_form input{
+    border: 1px solid #153037;
+}
+
+.input_f{
+    margin-top:0.4em;
+    padding: 0.7em;
+    width: 96%;
+}
+
+.input_b{
+    padding: 0.9em 0.6em;
+    width: 100%;
+}
+.input_button{
+    border: 1px solid gray;
+    border-radius: 6px;
+}
+
+p.center-text{
+    text-align: center;
+}
+
+div.hasAcct{
+    margin-top:2em;
+    border-top: 1px solid lightgray;
+}
+div.hasAcct a {
+    color: #153037;
+    text-decoration: none;
+}
+
+div.hasAcct a:hover {
+    color: hotpink;
+    text-decoration: none;
+}
+
+.google_button{
+    background-color: #f2fafc;
+    border:2px solid #b0b1b6;
+}
+
+.google_button:hover {
+    color: white;
+    background-color: #153037;
+    cursor: pointer;
+    border: 2px solid #153037;
+}
+
+#submit{
+    margin-top: 0.9em;
+    border: none;
+}
+#submit_login{
+    margin-top: 1.5em;
+    border: none;
+}
+.submit_button{
+    background-color: #81b6c4;
+}
+.submit_button:hover{
+    color: white;
+    background-color: #153037;
+    cursor: pointer;
+}
+.large_font{
+    margin: 0;
+    font-size: 1.5rem;
+}
+

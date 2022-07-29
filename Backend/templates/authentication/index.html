@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset='utf-8'>
+    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+    <title>home</title>
+    <meta name='viewport' content='width=device-width, initial-scale=1'>
+    {% load static %}
+    <link rel="stylesheet" href="{% static '/css/style.css' %}"/>
+    
+</head>
+<body>
+
+    <section class="logo">
+        <img src="{% static '/images/logo.png' %}" alt="logo" />
+      </section>
+      
+    {% for message in messages %}
+    <div class="alert alert- {{ message.tags }} alert-dismissible fade show" roles="alert">
+    <strong>Message:</strong> {{ message }}
+    <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+    <span aria-hidden="true">&times;</span>
+    </button>
+    </div>
+    {% endfor %}
+    
+    <h2>welcome</h2>
+
+    {% if user.is_authenticated %}
+    <h3>hello {{ fname }}</h3>
+    <h4>you're succefully logged in</h4>
+    <button type="submit"><a href="/signout">logout</a></button>
+    {% else %}
+    <button type="submit"><a href="/signin">login</a></button>
+    <button type="submit"><a href="/register">register</a></button>
+    {% endif %}
+    
+    
+</body>
+</html>

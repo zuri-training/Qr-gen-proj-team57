@@ -6,7 +6,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Register - GenCode</title>
     {% load static %}
+    {% load socialaccount %}
     <link rel="stylesheet" href="{% static '/css/style.css' %}"/>
+    
   </head>
   <body>
     <main>
@@ -17,7 +19,7 @@
       <section class="register_form">
         <p class="large_font"><strong>Register</strong></p>
         <p>Please input your details below to register</p>
-        <form action="/register" method="post">
+        <form action="register" method="post">
           {% csrf_token %}
           
           <label>Username</label><br />
@@ -78,9 +80,7 @@
 
         <p class="center-text">OR</p>
 
-        <button class="input_b input_button google_button" type="button">
-          Continue with Google
-        </button>
+        <button class="input_b input_button google_button" type="button" > <a href="{% provider_login_url 'google' %}">Continue with Google</a> </button>
 
         <div class="hasAcct">
           <p class="center-text">

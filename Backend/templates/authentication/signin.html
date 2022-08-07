@@ -6,6 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>LogIn - GenCode</title>
     {% load static %}
+    {% load socialaccount %}
     <link rel="stylesheet" href="{% static '/css/style.css' %}"/>
     
   </head>
@@ -71,12 +72,12 @@
         {% else %}
         <p class="center-text">OR</p>
 
-        <button class="input_b input_button google_button" type="button"> continue with google </button>
+        <button class="input_b input_button google_button" type="button" > <a href="{% provider_login_url 'google' %}">Continue with Google</a> </button>
         
 
         {% endif %}
       
-        
+        <div><a href="/password_reset">Forgot password?</a></div>
 
         <div class="hasAcct">
           <p class="center-text">

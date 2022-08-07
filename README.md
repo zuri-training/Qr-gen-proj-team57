@@ -6,6 +6,7 @@ UI/UX - Certified✅
 
 Introduction to QR codes
 A Qr code is a 2-D square-shaped black and white bar code that can be read by smartphones. QR codes store information that can be used to make a call, send a message/email, open a website or even redirect a location.
+
 A QR Code can store up to 4296 characters or 7089 digits in a single code thus making it viable to hold large amounts of content. An active QR Code is one that a QR Code scanner is able to scan easily, prompting users to click on an external link upon scanning. The external link delivers relevant information that the user is looking for such as restaurants menu, users portfolio, customers virtual card and voting information.
 
 What can QR codes be used for?

@@ -1,0 +1,120 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>settingpage</title>
+    <link
+    rel="stylesheet"
+    href="https://fonts.googleapis.com/css?family=Outfit"/>
+
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
+    />
+    <link rel="stylesheet" href="css/setting-1.css">
+
+</head>
+<body>
+    <div class="nav-row">
+      <div class="logo-div">
+        <img src="images/Blue logo.png" alt="" class="logo" />
+        <div class="back"><p><a href="index.html" class="a-4"><img src="images/arrow-left-solid.svg" width="10" height="10" alt=""></i>Back</a></p></div>
+        
+      </div>
+      <nav class="nav">
+        <div class="nav-list">
+          <a class="nav-a" href="#">Home</a>
+          <a class="nav-a" href="#">Services</a>
+          <a class="nav-a" href="contactus.html">Contact Us</a>
+          <a class="nav-a" href="faq.html">FAQs</a>
+          <a class="nav-a" href="#">API</a>
+        </div>
+      </nav>
+      <div class="btns">
+        <a href="#"><button class="white-btn">Log In</button></a>
+        <a href="#"><button class="blue-btn">Register</button></a>
+      </div>
+    </div>
+    <div class="setting-content">
+      <div class="heading">
+        <h2 class="h2">Settings</h2>
+        <h5 class="h5">Change Account Email</h5>
+      </div>
+      <div class="forms">
+        <p class="p">
+          Change your account email address below. <br> Please confirm your email address with your current password
+        </p>
+        <form action="#">
+          <label for="newemailaddress" style="color:black;" class="label">My new email address:</label>
+          <input type="email" placeholder="abcd@wxyz.com" class="input">
+          <br>
+          <label for="confirmemailaddress" style="color:black;" class="label">Confirm new email address:</label>
+          <input type="email" placeholder="abcd@wxyz.com" class="input">
+          <br>
+          <label for="password" style="color:black;" class="label">Verify with current password:</label>
+          <input type="password" placeholder="A1bcD!E4yxz" class="input">
+        </form>
+        <button class="confirm">Confirm</button>
+      </div>
+    </div>
+    <footer>
+        <div class="contents">
+          <div class="top">
+            <section>
+              <div class="company-info">
+                <img
+                  class="footerimg"
+                  src="images/White logo.png"
+                  alt="Company-Logo"
+                />
+              </div>
+              <div class="social-media">
+                <a href="#" class="fa fa-instagram"></a>
+                <a href="#" class="fa fa-twitter"></a>
+                <a href="#" class="fa fa-linkedin"></a>
+              </div>
+            </section>
+            <div class="link-boxes">
+              <ul class="box">
+                <li class="link_name">About</li>
+                <li><a href="#">About Us</a></li>
+                <li><a href="#">Our Services</a></li>
+                <li><a href="#">Contact Us</a></li>
+                <li><a href="#">Support</a></li>
+              </ul>
+              <ul class="box">
+                <li class="link_name">Product</li>
+                <li><a href="#">Why Gencode</a></li>
+                <li><a href="#">How it works</a></li>
+                <li><a href="#">APIs</a></li>
+              </ul>
+              <ul class="box">
+                <li class="link_name">Support</li>
+                <li><a href="#">Terms of Use</a></li>
+                <li><a href="#">Privacy</a></li>
+                <li><a href="#">FAQs</a></li>
+                <li><a href="#">Support</a></li>
+              </ul>
+              <ul class="box input-box">
+                <li class="link_name">Contact Us</li>
+                <li>
+                  <label for="email">Send an email to get a reply from us!</label>
+                  <input
+                    type="text"
+                    id="email"
+                    name="email"
+                    placeholder="Enter your email here"
+                  />
+                </li>
+              </ul>
+            </div>
+          </div>
+          <div class="bottom">
+            <span>© 2022 GenCode|Terms|Privacy</span>
+          </div>
+        </div>
+    </footer>
+    <script src="setting-1.js"></script>
+</body>
+</html>

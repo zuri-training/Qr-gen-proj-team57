@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>QRcode</title>
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css?family=Outfit"
+    />
+    <style>
+      body {
+        padding: 1%;
+        margin: 10%;
+        font-family: outfit;
+        background-color: #f3fafd;
+      }
+      .generate {
+        border: 5px, solid, #f3fafd;
+        border-radius: 10%;
+        color: #81b6c4;
+        font-family: outfit;
+      }
+
+      a {
+        color: white;
+        border: 100px, solid, #f3fafd;
+        border-color: black;
+      }
+      .all {
+        display: flex;
+        flex-direction: column;
+        border: 5px, solid;
+        border-radius: 15px;
+        padding: 10%;
+        background-color: #81b6c4;
+        gap: 10px;
+      }
+
+      label,
+      h1 {
+        color: white;
+        font-family: outfit;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="all">
+      <h1>QRcode Generator</h1>
+      <textarea name="text" id="text" cols="30" rows="3" plac></textarea>
+      <label for="text">Width</label>
+      <input type="text" id="width" value="256" />
+      <label for="text"> Height</label>
+      <input type="text" id="height" value="256" />
+      <label for="color"> Select Primary Color</label>
+      <input
+        type="color"
+        id="dark"
+        value="#000000"
+        placeholder="Primary Color"
+      />
+      <label for="color">Select Secondary Color</label>
+      <input type="color" id="light" value="#ffffff" />
+      <button id="generate">Generate</button>
+
+      <a
+        id="download"
+        onclick="download(this);"
+        download="Qrcode.jpeg"
+        style="display: none"
+        >Download Jpeg</a
+      >
+
+      <br />
+
+      <a
+        id="downloadd"
+        onclick="download(this);"
+        download="Qrcode.png"
+        style="display: none"
+        href=""
+      >
+        Download Png
+      </a>
+
+      <br />
+
+      <a
+        id="downloaddd"
+        onclick="download(this);"
+        download="Qrcode.pdf"
+        style="display: none"
+      >
+        Download PDF
+      </a>
+
+      <div id="qrcode"></div>
+
+      <script src="qrcode2.js"></script>
+      <script src="https://cdn.jsdelivr.net/npm/davidshimjs-qrcodejs@0.0.2/qrcode.min.js"></script>
+    </div>
+  </body>
+</html>

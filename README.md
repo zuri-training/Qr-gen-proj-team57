@@ -4,6 +4,21 @@ PROJECT NAME: "GENCODE"
 Project languages: JavaScript,Django(python)
 UI/UX - Certified✅
 
+## Table of Contents
+
+* [Acknowledgements](#acknowledgements)
+* [Project Description](#project-description)
+* [Problem statement](#problem-statement)
+* [Framework for building](#framework-for-building)
+* [Contributors Guide](#contributors-guide)
+* [Features of the Website](#features-of-the-website)
+* [Product Specification](#product-specialization)
+* [Project Status](#project-status)
+* [Contributors](#contributors)
+* [Relevant Links](#relevant-links)
+* [API Details](#api-details)
+* [Questions and Answers](#questions-and-answer)
+
 
 ## Acknowledgements
 Special appreciation to Zuri Team and I4G for giving every
@@ -73,38 +88,74 @@ Ajakaye Oluwafemi Dunsin(Team-lead)
 Wahab Ibrahim(Assistant)
 
 __Designers__ <br/>
-Wahab Ibrahim
-Abdullahi Suideen
-Oladejo Abigail
-Ademola Modupe
-Damilola Ibitoye
-Frances Ebere Nzelu
-Ifeoluwa Olaleye
-Dina Iyanuoluwa
-Katherine Shiawoya
-Adedamola Afolabi
-Omolola Olayemi
-Omorinsola Oyeladun
-Patricia Atumonyego
+* Wahab Ibrahim
+
+
+* Abdullahi Suideen
+
+
+* Oladejo Abigail
+
+
+* Ademola Modupe
+
+
+* Damilola Ibitoye
+
+
+* Frances Ebere Nzelu
+
+
+* Ifeoluwa Olaleye
+
+
+* Dina Iyanuoluwa
+
+
+* Katherine Shiawoya
+
+
+* Adedamola Afolabi
+
+
+* Omolola Olayemi
+
+
+* Omorinsola Oyeladun
+
+
+* Patricia Atumonyego
+
 
 <br/>
 
 __BackEnd Contributors__ <br/>
-Lilian Wanjiku
-Precious Kingsley Okolaa
-James Obekpa
-Ajakaye Oluwafemi Dunsin
+* Lilian Wanjiku
+
+* Precious Kingsley Okolaa
+
+* James Obekpa
+
+* Ajakaye Oluwafemi Dunsin
 
 <br/>
 
 __FrontEnd Contributors__ <br/>
-Ajakaye Oluwafemi Dunsin
-Arafat Motolani
-Oluwadara
-Daniel Chibueze Ekeleme
-Precious Kingsley Okolaa
-Ofe Osigbemhe
-Abiodun Ade
+* Ajakaye Oluwafemi Dunsin
+
+* Arafat Motolani
+
+* Oluwadara
+
+* Daniel Chibueze Ekeleme
+`https://github.com/DanitoSharp`
+
+* Precious Kingsley Okolaa
+
+* Ofe Osigbemhe
+
+* Abiodun Ade
+
 ## Relevant Links
 * Figma Design
 * FigJam Design

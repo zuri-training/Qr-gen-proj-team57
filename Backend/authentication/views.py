@@ -3,6 +3,12 @@ from django.shortcuts import redirect, render
 from django.contrib.auth.models import User
 from django.contrib import messages
 from django.contrib.auth import authenticate, login, logout
+import logging, traceback
+from hitcount.views import HitCountDetailView
+from requests import post
+# from history.mixins import objectViewMixin
+
+logger = logging.getLogger('django')
 
 
 # Create your views here.
@@ -40,10 +46,10 @@ def register(request):
         myuser = User.objects.create_user(username, email, pass1)
         myuser.first_name = fname
         myuser.last_name = lname
-        
+
         myuser.save()
         messages.success(request, "account created succesfully")
-
+        logger.info('user {} registered successfully {}'.format(myuser.first_name, request.META.get('HTTP_REFERER')))
         return redirect('signin')
     
     
@@ -59,10 +65,12 @@ def signin(request):
         if user is not None:
             login(request, user)
             fname= user.first_name
+            logger.info('user {} signed in successfully {}'.format(user.first_name, request.META.get('HTTP_REFERER')))
             return render(request,  'authentication/index.html',{'fname':fname})
         
         else:
-            messages.error(request, "incorrect credentials")
+            messages.error(request, user, "incorrect credentials")
+            logger.info('user {} was unable to sign in {}'.format(username, request.META.get('HTTP_REFERER')))
             return redirect('home')
     
     return render(request, 'authentication/signin.html')
@@ -71,4 +79,11 @@ def signin(request):
 def signout(request):
     logout(request)
     messages.success(request, "logout successful")
+    logger.info('user logged out')
     return redirect('home')
+
+# class PostDetailView(HitCountDetailView):
+#     model = post
+#     template_name = 'authentication/signin.html'
+#     slug_field = 'slug'
+#     count_hit = True

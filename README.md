@@ -17,7 +17,7 @@ UI/UX - Certified✅
 * [Contributors](#contributors)
 * [Relevant Links](#relevant-links)
 * [API Details](#api-details)
-* [Questions and Answers](#questions-and-answer)
+* [Questions and Answers](#questions-and-answers)
 
 
 ## Acknowledgements

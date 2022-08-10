@@ -115,9 +115,6 @@ __Designers__ <br/>
 * Katherine Shiawoya
 
 
-* Adedamola Afolabi
-
-
 * Omolola Olayemi
 
 
@@ -125,6 +122,12 @@ __Designers__ <br/>
 
 
 * Patricia Atumonyego
+
+
+* Prince Isong
+
+
+* Inioluwa Oladimeji 
 
 
 <br/>

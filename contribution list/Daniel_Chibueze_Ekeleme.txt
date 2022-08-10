@@ -1,0 +1,20 @@
+I'm Daniel 'Chibueze Ekeleme
+These are my contributions toward the project.
+
+Using pure HTML and CSS I Implemented the registration and login
+page from the project's figma design.
+https://github.com/DanitoSharp/gen_code_reg_and_login_page
+
+I was tasked with implementing the "Our Services" and "Easy Steps" sections of the
+project's landing page, i implemented both the desktop and mobile view 
+from the project's figma design, i developed the interaction and animation using
+pure css. https://github.com/DanitoSharp/gen_code_sub_landing
+
+
+I was also tasked to implement the user profile view and in addition
+develop an animation upon page load.
+https://github.com/DanitoSharp/gencode-profile-page
+
+Worked on the project's documentation.
+
+I helped my team mate on how to use github.

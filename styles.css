@@ -1,0 +1,43 @@
+body {
+    margin: 0;
+    padding: 0;
+    background-color: #F3FAFD;
+    font-family: sans-serif;
+}
+img {
+    width: 100px;
+    height: 100%;
+}
+.arrow {
+    width: 20px;
+    height: 2%;
+    display: inline;
+    float: left;
+    vertical-align: bottom;
+    line-height: 0px;
+    padding: 5px;
+    margin-right: 5px;
+}
+.back {
+    display: inline-block;
+    line-height: 0px;
+    vertical-align: top;
+}
+.second {
+    text-align: center;
+}
+.click {
+    border-radius: 5px;
+    padding: 10px;
+    padding-left: 100px;
+    padding-right: 100px;
+    border: none;
+    color: black;
+    background-color: #81B6C4;
+    font: bolder;
+}
+.link {  
+    background: none;
+    border:none; 
+    color: #81B6C4;
+}

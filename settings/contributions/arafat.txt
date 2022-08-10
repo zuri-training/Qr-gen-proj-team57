@@ -1,0 +1,10 @@
+I'm Arafat Motolani
+
+These are my contributions towards the project:
+
+Using pure HTML and CSS, i implemented the hero section of the landing pages from the project's figma design.
+
+I also implemented the settings page of the project and the sub pages using HTML and CSS
+
+I made the settings page responsive to both desktop and moobile view
+

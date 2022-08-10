@@ -1,0 +1,29 @@
+USER RESEARCH (GOOGLE DOCS)
+https://docs.google.com/document/d/1prKzPzGaZv-HqNDY8W8-w69j5tme2GAipIev1d_-sXw/edit?usp=sharing
+I worked on the following aspects with members of my team;
+1.	Research Background
+2.	Problem Statement
+3.	Research Objectives
+4.	Research Questions
+5.	Screener Questions
+6.	Interview Script
+
+UX RESEARCH (FIGJAM)
+https://www.figma.com/file/nv6kMaRI3XBBGgPMhthlAz/Project_57
+1.	Organized notes gotten from the interview participants
+2.	Empathy Map to better understand the user(s) we are creating the QR gen for
+3.	User flow to better visualize and display the complete path a user takes when navigating our website
+4.	User Story to create a concrete view of the user
+5.	Brainstorming to generate ideas to solve clearly defined design problems
+6.	Idea Prioritization Matrix to rank our priorities and determine most crucial focus areas
+7.	Features List stating out the functionalities of the website
+
+UI DESIGN (FIGMA)
+https://www.figma.com/file/BaSvlvMhQsfRdDkElxAMDB/Proj_team_57-(Style-Guides)?node-id=74%3A26
+https://www.figma.com/file/BaSvlvMhQsfRdDkElxAMDB/Proj_team_57-(Style-Guides)?node-id=1033%3A8212
+1.	Created the Onboarding Screen For the Low Fidelity and High Fidelity Pages  For Desktop View
+2.	Created the Profile Folders Page For Mobile and Desktop View For the Low Fidelity Page
+3.	Created the Profile Folders Page For Mobile and Desktop View for the High Fidelity Page
+4.	Created the Settings Page For Mobile and Desktop View For the Low Fidelity Page
+5.	Created the Settings Page For Mobile and Desktop View for the High Fidelity Page
+

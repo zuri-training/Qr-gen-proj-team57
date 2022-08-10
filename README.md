@@ -22,7 +22,7 @@ UI/UX - Certified✅
 
 ## Acknowledgements
 Special appreciation to Zuri Team and I4G for giving every
-participant of team 57 the privelege to acquire more
+participant of team 57 the privilege to acquire more
 knowlegde, and to put into practice all that has been impacted
 in the course of the programme.
 
@@ -148,7 +148,7 @@ __FrontEnd Contributors__ <br/>
 
 * Arafat Motolani
 
-* Oluwadara
+* Aderibigbe Omolola(Dahrah)
 
 * Daniel Chibueze Ekeleme
 `https://github.com/DanitoSharp`

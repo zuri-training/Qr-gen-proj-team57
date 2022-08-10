@@ -1,0 +1,16 @@
+I'm James Obekpa with GitHub name Jaykovic and here are my contributions toward the project.
+
+I was able to build and design social media share buttons for:
+ - Facebook
+ - Twitter
+ - WhatsApp
+ - Telegram
+https://github.com/Jaykovic/Social_Media_Share_Button_JS
+
+Also, added the respective APIs for the social media share buttons
+
+On the backend side, I worked on
+- Tracking users sign, signout
+- Log user activities to a file when they register, sign in, sign out
+- Use django signals to send and receive user information after sign in
+User info with time and date can be viewed on django admin.

@@ -16,18 +16,36 @@
         font-family: outfit;
         background-color: #f3fafd;
       }
-      .generate {
+      #text,#width,#height{
         border: 5px, solid, #f3fafd;
-        border-radius: 10%;
+        border-radius: 20px;
+        color: black;
+        font-family: outfit;
+        max-width: 500px;
+        padding:10px;
+      }
+      #generate {
+        border: 5px, solid, #f3fafd;
+        border-radius: 20px;
         color: #81b6c4;
         font-family: outfit;
+        max-width: 100px;
+        justify-content: center;
+      }
+      #qrcode {
+        margin: auto;
       }
 
-      a {
-        color: white;
-        border: 100px, solid, #f3fafd;
-        border-color: black;
+      .downloadbtns {
+        border: 5px, solid, #f3fafd;
+        border-radius: 20px;
+        color: #81b6c4;
+        font-family: outfit;
+        max-width: 300px;
+        padding: 5px;
+        
       }
+     
       .all {
         display: flex;
         flex-direction: column;
@@ -43,12 +61,30 @@
         color: white;
         font-family: outfit;
       }
+      .share{
+        text-align: center;
+      }
+      .container {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        background: #81b6c4;
+      }
+
+      .button {
+        margin: 1rem;
+        font-size: 30px;
+      }
+
+      .button:hover {
+        transform: scale(1.3);
+      }
     </style>
   </head>
   <body>
     <div class="all">
       <h1>QRcode Generator</h1>
-      <textarea name="text" id="text" cols="30" rows="3" plac></textarea>
+      <input name="text" id="text" cols="30" rows="3" placeholder="Input your link,phone number or text"></input>
       <label for="text">Width</label>
       <input type="text" id="width" value="256" />
       <label for="text"> Height</label>
@@ -63,13 +99,13 @@
       <label for="color">Select Secondary Color</label>
       <input type="color" id="light" value="#ffffff" />
       <button id="generate">Generate</button>
-
+          
       <a
         id="download"
         onclick="download(this);"
         download="Qrcode.jpeg"
         style="display: none"
-        >Download Jpeg</a
+        ><button class="downloadbtns">Download Jpeg</button></a
       >
 
       <br />
@@ -80,8 +116,7 @@
         download="Qrcode.png"
         style="display: none"
         href=""
-      >
-        Download Png
+        ><button class="downloadbtns">Download Png</button>
       </a>
 
       <br />
@@ -91,14 +126,24 @@
         onclick="download(this);"
         download="Qrcode.pdf"
         style="display: none"
-      >
-        Download PDF
+        ><button class="downloadbtns">Download PDF</button>
       </a>
 
       <div id="qrcode"></div>
-
-      <script src="qrcode2.js"></script>
+      <div class="share">
+        <p>Share on Social Media</p>
+      </div>
+      <div class="container">
+        
+        <span class="button twitter"><i class="fa fa-twitter"></i></span>
+        <span class="button whatsapp"><i class="fa fa-whatsapp"></i></span>
+        <span class="button telegram"><i class="fa fa-telegram"></i></span>
+        <span class="button facebook"><i class="fa fa-facebook"></i></span>
+      </div>
       <script src="https://cdn.jsdelivr.net/npm/davidshimjs-qrcodejs@0.0.2/qrcode.min.js"></script>
+      <script src="qrcode.js" async defer></script>
+      <script src="https://use.fontawesome.com/ba1226c86c.js"></script>
+      <script src="qrcode2.js"></script>
     </div>
   </body>
 </html>

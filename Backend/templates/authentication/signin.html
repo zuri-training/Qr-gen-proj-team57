@@ -15,6 +15,7 @@
       <section class="logo">
         <img src="{% static '/images/logo.png' %}" alt="logo" />
       </section>
+         
 
       <section class="register_form">
         <p class="large_font"><strong>Welcome back !</strong></p>
@@ -66,16 +67,13 @@
             value="Log in"
           />
         </form>
-        {% if user.is_authenticated %}
-        <p>Welcome, {{ fname }} !</p>
-    
-        {% else %}
+       
         <p class="center-text">OR</p>
 
         <button class="input_b input_button google_button" type="button" > <a href="{% provider_login_url 'google' %}">Continue with Google</a> </button>
         
 
-        {% endif %}
+        
       
         <div><a href="/password_reset">Forgot password?</a></div>
 
@@ -83,9 +81,15 @@
           <p class="center-text">
             Don't have an account?
             <a href="/register">Register</a>
+            
           </p>
         </div>
+        <a href="/signout"><button class="white-btn">Log out</button></a>
+        <button  onclick="history.back()" class="header__button"><span>&#8592;</span>Back</button>
       </section>
     </main>
   </body>
 </html>
+           
+
+          

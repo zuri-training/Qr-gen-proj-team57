@@ -66,10 +66,9 @@ div.hasAcct a:hover {
     text-decoration: none;
 }
 
-.google_button {
+.google_button{
     background-color: #f2fafc;
     border:2px solid #b0b1b6;
-    text-decoration: none;
 }
 
 .google_button:hover {

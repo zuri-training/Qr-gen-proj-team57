@@ -3,7 +3,7 @@ from django.shortcuts import redirect, render
 from django.contrib.auth.models import User
 from django.contrib import messages
 from django.contrib.auth import authenticate, login, logout
-from .forms import ContactForm
+from .forms import ContactForm, UserUpdateForm, ProfileUpdateForm
 from django.core.mail import send_mail, BadHeaderError
 from django.contrib.auth.forms import PasswordResetForm
 from django.template.loader import render_to_string
@@ -66,12 +66,14 @@ def signin(request):
         if user is not None:
             login(request, user)
             fname= user.first_name
+            messages.info(request, f"You are now logged in as {username}.")
             return render(request,  'authentication/index.html',{'fname':fname})
-        
+			
         else:
             messages.error(request, "incorrect credentials")
             return redirect('home')
     
+
     return render(request, 'authentication/signin.html')
 
 
@@ -98,7 +100,9 @@ def contact(request):
 				send_mail(subject, message, 'admin@example.com', ['admin@example.com']) 
 			except BadHeaderError:
 				return HttpResponse('Invalid header found.')
+			messages.success(request, "Message sent")
 			return redirect ('home')
+			messages.error(request, "Erro Message not sent")
       
 	form = ContactForm()
 	return render(request, 'authentication/contact.html', {'form':form})
@@ -143,3 +147,28 @@ def password_reset_request(request):
 
 def faq(request):
     return render(request, 'authentication/faq.html')
+
+
+
+def profile(request):
+	if request.method == 'POST':
+		u_form = UserUpdateForm(request.POST, instance=request.user)
+		p_form = ProfileUpdateForm(request.POST,
+                                   request.FILES,
+                                   instance=request.user.profile)
+		if u_form.is_valid() and p_form.is_valid():
+			u_form.save()
+			p_form.save()
+			messages.success(request, f'Your account has been updated!')
+			return redirect('profile')
+
+	else:
+		u_form = UserUpdateForm(instance=request.user)
+		p_form = ProfileUpdateForm(instance=request.user.profile)
+
+	context = {
+        'u_form': u_form,
+        'p_form': p_form
+    }
+
+	return render(request, 'authentication/profile.html')

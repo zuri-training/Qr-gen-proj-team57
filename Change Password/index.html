@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" />
+    <title>Change Account Password</title>
+  </head>
+  <body>
+    <div class="mainDiv">
+      <div class="style">
+        <form action="">
+          <h3 class="formTitle">Change Account Password</h3>
+          <p class="formText">
+            Enter a new password consisting of at least six character. A strong
+            password includes both upper and lower case letters and numbers.
+          </p>
+          <div class="changePw">
+            <div class="inputDiv">
+              <label class="inputLabel" for="newPassword">Password</label>
+              <input
+                type="password"
+                id="newPassword"
+                name="newPassword"
+                title="New password"
+                placeholder="A1bcD!E4yxz"
+              />
+            </div>
+            <div class="inputDiv">
+              <label class="inputLabel" for="confirmPassword"
+                >Repeat Password</label
+              >
+              <input
+                type="password"
+                id="confirmPassword"
+                name="confirmPassword"
+                title="Confirm new password"
+                placeholder="A1bcD!E4yxz"
+              />
+            </div>
+            <div class="btn">
+              <input
+                class="submitButton"
+                type="submit"
+                value="Confirm"
+                title="Change password"
+              />
+            </div>
+          </div>
+        </form>
+      </div>
+    </div>
+  </body>
+</html>

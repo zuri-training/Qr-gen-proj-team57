@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css?family=Outfit"
+    />
+    <!-- <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.0/css/all.min.css"
+    /> -->
+    <title>SIGN IN PAGE</title>
+  </head>
+  <body>
+    <div class="img">
+      <img src="Frame 2244logo.png" alt="Logo" class="Logo" />
+    </div>
+    <div class="form">
+      <h3>Welcome back!</h3>
+      <p>Please input the details below to log in</p>
+      <form action="">
+        <div class="forminfo">
+          <label for="email">Email</label><br />
+          <input
+            type="text"
+            id="email"
+            name="email"
+            placeholder="Enter email address"
+          /><br />
+          <label for="password">Password</label><br />
+          <input
+            type="password"
+            id="password"
+            name="password"
+            placeholder="Enter password"
+          />
+          <i class="far fa-eye" id="togglePassword"></i><br />
+          <label class="checkbox"
+            ><input type="checkbox" name="remember" />Remember password</label
+          >
+        </div>
+        <div class="btn">
+          <button type="submit" class="login"><b>Log in</b></button>
+          <p>OR</p>
+          <button type="submit" class="google">
+            <b>Continue with Google</b>
+          </button>
+        </div>
+        <br />
+        <hr />
+        <p class="register">Don't have an account? <b>Register</b></p>
+      </form>
+    </div>
+    <!-- <script>
+      const togglePassword = document.querySelector("#togglePassword");
+      const password = document.querySelector("#id_password");
+
+      togglePassword.addEventListener("click", function (e) {
+        // toggle the type attribute
+        const type =
+          password.getAttribute("type") === "password" ? "text" : "password";
+        password.setAttribute("type", type);
+        // toggle the eye slash icon
+        this.classList.toggle("fa-eye-slash");
+      });
+    </script> -->
+  </body>
+</html>

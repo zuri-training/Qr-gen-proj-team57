@@ -1,0 +1,68 @@
+body {
+  background-color: #f3fafd;
+  color: #163037;
+  display: flex;
+  font-family: "Outfit", sans-serif;
+  justify-content: center;
+  margin-top: 20px;
+}
+img {
+  height: 70px;
+  width: 140px;
+}
+.img {
+  padding-right: 50px;
+}
+.form {
+  margin-top: 10px;
+}
+.forminfo {
+  line-height: 50px;
+}
+.checkbox {
+  font-size: 11px;
+}
+/* i { */
+/* margin-left: -30px; */
+/* cursor: pointer; */
+/* } */
+input[type="text"],
+input[type="password"] {
+  width: 500px;
+  height: 20px;
+  padding: 10px;
+  border-width: thin;
+  border-radius: 5px;
+  border-color: #163037;
+  background-color: transparent;
+}
+button {
+  width: 525px;
+  height: 40px;
+  font-family: "Outfit", sans-serif;
+}
+.btn {
+  text-align: center;
+}
+::placeholder {
+  font-family: "Outfit", sans-serif;
+  color: #727272;
+}
+.login {
+  background-color: #81b6c4;
+  border-width: thin;
+  border-color: #81b6c4;
+  border-radius: 5px;
+}
+.google {
+  border-width: thin;
+  border-color: #afb1b6;
+  border-radius: 5px;
+  background-color: transparent;
+}
+.register {
+  text-align: center;
+}
+p {
+  font-size: 8px;
+}

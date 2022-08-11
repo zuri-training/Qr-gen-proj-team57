@@ -1,0 +1,185 @@
+@import url("https://fonts.googleapis.com/css2?family=Outfit:wght@200;300;400;500;600;700&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Outfit", sans-serif;
+}
+body {
+  min-height: 100vh;
+  width: 100%;
+  background: #f3fafd;
+}
+img {
+  height: 70px;
+  width: 140px;
+}
+footer {
+  position: fixed;
+  background: #2d676e;
+  width: 100%;
+  bottom: 0;
+  left: 0;
+}
+footer .contents {
+  max-width: 1250px;
+  margin: auto;
+  padding: 30px 40px 40px 40px;
+}
+footer .contents .top {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 50px;
+}
+footer .contents .top section {
+  width: 23%;
+}
+/* .contents .top .company-info { */
+/* } */
+.contents .top .social-media {
+  display: flex;
+  padding-left: 40px;
+}
+footer .contents .link-boxes {
+  width: 100%;
+  display: flex;
+  /* justify-content: space-between; */
+}
+footer .contents .link-boxes .box {
+  width: calc(100% / 4 - 10px);
+  line-height: 30px;
+}
+.contents .link-boxes .box .link_name {
+  color: #fff;
+  font-size: 18px;
+  font-weight: 400;
+  margin-bottom: 10px;
+  position: relative;
+  list-style: none;
+}
+.contents .link-boxes .box li {
+  list-style: none;
+  /* color: #fff; */
+}
+.contents .link-boxes .box li a {
+  color: #fff;
+  font-size: 14px;
+  font-weight: 400;
+  text-decoration: none;
+  opacity: 0.8;
+  transition: all 0.4s ease;
+}
+.contents .link-boxes .box li a:hover {
+  opacity: 1;
+  text-decoration: underline;
+}
+.link-boxes .input-box input {
+  height: 40px;
+  /* width: calc(100% + 55px); */
+  /* width: auto; */
+  outline: none;
+  border: 2px solid #fff;
+  background: #fff;
+  border-radius: 4px;
+  padding: 0 15px;
+  font-size: 15px;
+  color: #fff;
+  margin-top: 5px;
+}
+label {
+  color: #fff;
+  font-size: 14px;
+  font-weight: 400;
+  text-decoration: none;
+  opacity: 0.8;
+  display: grid;
+}
+footer .bottom {
+  width: 100%;
+  max-width: 1250px;
+  margin: auto;
+  padding: 10px 40px;
+  justify-content: space-between;
+  text-align: center;
+}
+footer::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: 100px;
+  height: 1px;
+  width: 100%;
+  background: #f3fafd;
+}
+.bottom span {
+  font-size: 14px;
+  font-weight: 300;
+  color: #fff;
+  opacity: 0.6;
+  text-decoration: none;
+}
+.fa {
+  padding: 10px;
+  font-size: 30px;
+  width: 0;
+  text-align: center;
+  text-decoration: none;
+  margin: 5px 2px;
+  color: white;
+}
+
+@media (max-width: 900px) {
+  footer .contents .link-boxes {
+    flex-wrap: wrap;
+    /* display: grid;  */
+  }
+  footer .contents .link-boxes .input-box {
+    width: 40%;
+    margin-top: 10px;
+  }
+}
+@media (max-width: 700px) {
+  footer {
+    position: relative;
+  }
+  .contents .top .company-info {
+    font-size: 26px;
+  }
+  .contents .top .social-media a {
+    height: 35px;
+    width: 35px;
+    font-size: 14px;
+    line-height: 35px;
+  }
+  footer .contents .link-boxes .box {
+    width: calc(100% / 3 - 10px);
+  }
+  footer .contents .link-boxes .input-box {
+    width: 60%;
+  }
+  .bottom span,
+  .bottom a {
+    font-size: 12px;
+  }
+}
+@media (max-width: 520px) {
+  footer::before {
+    bottom: 100px;
+  }
+  footer .contents .top {
+    flex-direction: column;
+  }
+  .contents .top .social-media {
+    margin-bottom: 20px;
+  }
+  footer .contents .link-boxes .box {
+    width: calc(100% / 2 - 10px);
+  }
+  footer .contents .link-boxes .input-box {
+    width: 100%;
+  }
+  footer .contents .top section {
+    width: 125%;
+  }
+}

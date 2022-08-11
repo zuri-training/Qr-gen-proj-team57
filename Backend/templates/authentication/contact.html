@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset='utf-8'>
+    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+    <title>CONTACT US</title>
+    <meta name='viewport' content='width=device-width, initial-scale=1'>
+    {% load static %}
+     <link
+      href="https://fonts.googleapis.com/css2?family=Outfit:wght@100;200&family=Roboto:ital,wght@0,500;1,300&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="{% static '/css/contactus.css' %}"/>
+   
+</head> 
+<body>
+    <button  onclick="history.back()" class="header__button"><span>&#8592;</span>Back</button>
+    <main class="contact-us__container">
+        <div class="contact-us__header-content">
+          <h1>How Can We Help You?</h1>
+          <p>Let us know how we can help you and we'll get right back to you.</p>
+        </div>
+        <div class="contact-us__form">
+        <form method="post">
+        {% csrf_token %}
+            {{form.as_p}}
+            
+            <button type="submit" class="contact-us__btn">Contact us</button>
+        </form>
+        
+    </div>
+    
+</body>
+</html>

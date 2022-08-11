@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>FAQ Page</title>
+    {% load static %}
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@100;200&family=Roboto:ital,wght@0,500;1,300&display=swap"rel="stylesheet"/>
+    <link rel="stylesheet" href="{% static '/css/faq.css' %}" />
+  </head>
+  <body>
+    
+      <div class="header__container">
+        <button  onclick="history.back()" class="header__button"><span>&#8592;</span>Back</button>
+        <h1>Frequently Asked Questions</h1>
+      </div>
+
+    <main class="main__container">
+      
+      <div class="text-body__container">
+        <div class="text__box-container">
+          <p><span class="span__q">&#124;Q. </span>what is a QR code?</p>
+          <p>
+            <span class="span__a">&#124;A. </span
+            ><span class="text"
+              >A QR(Quick Response) code that can conceal thousands characters.
+              it can store any information about a product or link to a
+              destination URL. Scanning a Qr code with a smartphone or tablet
+              directs the user to destination URL</span
+            >
+          </p>
+        </div>
+
+        <br />
+        <br />
+        <br />
+
+        <div class="text__box-container">
+          <p>
+            <span class="span__q">&#124;Q. </span>what are QR codes used for?
+          </p>
+          <p>
+            <span class="span__a">&#124;A. </span
+            ><span class="text"
+              >QR codes are used for a variety of purposes including but not
+              limited to Advertising, Print media, Secure payments, Social media
+              links,Business, some people also use it for private
+              gatherings.</span
+            >
+          </p>
+        </div>
+        <br />
+        <br />
+        <br />
+
+        <div class="text__box-container">
+          <p><span class="span__q">&#124;Q. </span>How secure is QR code?</p>
+          <p>
+            <span class="span__a">&#124;A. </span
+            ><span class="text">
+              QR codes are 95% safe and secure to store all your data and
+              information. QR codes are known to be free from threats of
+              hacking.
+            </span>
+          </p>
+        </div>
+
+        <br />
+        <br />
+        <br />
+        <div class="text__box-container">
+          <p>
+            <span class="span__q">&#124;Q. </span>How do i generate my QR code?
+          </p>
+          <p>
+            <span class="span__a">&#124;A. </span
+            ><span class="text">
+              simply enter the required information on getcode's web link/app,
+              such as the destination URL and generate your own dynamic QR code
+              in the blink of an eye
+            </span>
+          </p>
+        </div>
+
+        <br />
+        <br />
+        <br />
+
+        <div class="text__box-container">
+          <p>
+            <span class="span__q">&#124;Q. </span>can i change the QR code
+            later?
+          </p>
+          <p>
+            <span class="span__a">&#124;A. </span
+            ><span class="text"
+            >if you're worried about changing your QR codes on the long run
+            due to any reason simply because you want to change it, yes, you
+            can change QR code. All you have to do is change the destination
+            URL of the already generated QR code.You can also change it
+            through your registered E-mail address.</span
+          >
+          </p>
+          
+        </div>
+
+        <br />
+        <br />
+        <br />
+        <div class="text__box-container">
+          <p>
+            <span class="span__q">&#124;Q. </span>Does the QR code have an
+            expiry date?
+          </p>
+          <p>
+            <span class="span__a">&#124;A. </span><span class="text">your QR codes are valid for as
+                long as your membership is valid and active
+              </p></span>
+        </div>
+
+        <br />
+        <br />
+        
+      </div>
+      <div class="footer">
+        <p>
+            Your question is not listed here? Send us a message via our e-mail@supportgetcode.com and we will answer your questions.
+        </p>
+      </div>
+      <footer>
+      <div class="contents">
+        <div class="top">
+          <section>
+            <div class="company-info">
+              <img class="footerimg" src="{% static '/images/White logo.png' %}" alt="Company-Logo" />
+            </div>
+            <div class="social-media">
+              <a href="#" class="fa fa-instagram"></a>
+              <a href="#" class="fa fa-twitter"></a>
+              <a href="#" class="fa fa-linkedin"></a>
+            </div>
+          </section>
+          <div class="link-boxes">
+            <ul class="box">
+              <li class="link_name">About</li>
+              <li><a href="#">About Us</a></li>
+              <li><a href="#">Our Services</a></li>
+              <li><a href="#">Contact Us</a></li>
+              <li><a href="#">Support</a></li>
+            </ul>
+            <ul class="box">
+              <li class="link_name">Product</li>
+              <li><a href="#">Why Gencode</a></li>
+              <li><a href="#">How it works</a></li>
+              <li><a href="#">APIs</a></li>
+            </ul>
+            <ul class="box">
+              <li class="link_name">Support</li>
+              <li><a href="#">Terms of Use</a></li>
+              <li><a href="#">Privacy</a></li>
+              <li><a href="#">FAQs</a></li>
+              <li><a href="#">Support</a></li>
+            </ul>
+            <ul class="box input-box">
+              <li class="link_name">Contact Us</li>
+              <li>
+                <label for="email">Send an email to get a reply from us!</label>
+                <input
+                  type="text"
+                  id="email"
+                  name="email"
+                  placeholder="Enter your email here"
+                />
+              </li>
+            </ul>
+          </div> 
+        </div>
+        
+        <div class="bottom">
+          <span>© 2022 GenCode|Terms|Privacy</span>
+        </div>
+      </div>
+    </footer>
+    </main>
+  </body>
+</html>

@@ -3,19 +3,43 @@
 <head>
     <meta charset='utf-8'>
     <meta http-equiv='X-UA-Compatible' content='IE=edge'>
-    <title>home</title>
+    <title>HOME PAGE</title>
     <meta name='viewport' content='width=device-width, initial-scale=1'>
     {% load static %}
-    <link rel="stylesheet" href="{% static '/css/style.css' %}"/>
+    <link rel="stylesheet"href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"/>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Outfit"/>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css"/>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+    
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.1.1/assets/owl.carousel.min.css"/>
+    <link rel="stylesheet" href="http://themes.audemedia.com/html/goodgrowth/css/owl.theme.default.min.css"/>
+   
+</head>
+
+    
+    <link rel="stylesheet" href="{% static '/css/index.css' %}" />
+    <link rel="stylesheet" href="{% static '/css/herosection.css' %}" />
     
 </head>
 <body>
 
-    <section class="logo">
-        <img src="{% static '/images/logo.png' %}" alt="logo" />
-      </section>
-      
-    {% for message in messages %}
+    {% block content %}
+    {% include  'authentication/includes/messages.html'  %}
+    <div class="nav-row">
+        <div class="logo-div">
+          <img src="{% static '/images/logo.png' %}"  class="logo"alt="logo" />
+        </div>
+        <nav class="nav">
+            <div class="nav-list">
+              <a class="nav-a" href="/">Home</a>
+              <a class="nav-a" href="#">Services</a>
+              <a class="nav-a" href="/contact">Contact Us</a>
+              <a class="nav-a" href="/faq">FAQs</a>
+              <a class="nav-a" href="#">API</a>
+             <!-- <a class="nav-a" href="/profile">profile</a> -->
+
+            </div>
+            {% for message in messages %}
     <div class="alert alert- {{ message.tags }} alert-dismissible fade show" roles="alert">
     <strong>Message:</strong> {{ message }}
     <button type="button" class="close" data-dismiss="alert" aria-label="Close">
@@ -23,18 +47,359 @@
     </button>
     </div>
     {% endfor %}
+          </nav>
+          <div class="btns">
+            <a href="/signin"><button class="white-btn">Log In</button></a>
+            <a href="/register"><button class="blue-btn">Register</button></a>
+            <!-- <a href="/signout"><button class="white-btn">Log out</button></a>-->
+            
+          </div>
+        </div>
+        <span class="hidesidebar">
+          <span class="hidesidebar"style="font-size: 30px; cursor: pointer"onclick="openNav()">&#9776;</span>
+            <div class="bluebtn">
+                <a href="/register"><button class="blue-btn">Register</button></a>
+            </div>
+            <div class="logo-div">
+                <img style="align-items: left"src="{% static '/images/Bluelogo.png' %}" alt=""class="logo"/>
+            </div>
+        </span>
+        <div id="mySidenav" class="sidenav">
+          <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+          <a href="/">Home</a>
+          <a href="#">Services</a>
+          <a href="/contact">Contact Us</a>
+          <a href="/faq">FAQs</a>
+          <a href="#">API</a>
+        </div>
+        <!--Hero section -->
+        <div class="slider">
+            <div class="slide_viewer">
+                <div class="slide_group">
+                    <div class="slide">
+                        <div class="myslides">
+                            <main class="main">
+                                <div class="content">
+                                    <h1 class="h2">Get The Most Of Your Information Secured.</h1>
+                                    <p class="p"> Generate,save and utilize your digital QR codes.</p>
+                                    <button class="btn-1">Generate QR code</button>
+                                    <button class="btn-2">Watch Tutorial</button>
+                                </div>
+                                <div class="image">
+                                    <img class="img"src=" {% static '/images/Frame2248.jpg' %}" class="main"alt="an image"width="450"height="300"/>
+                                </div>
+                            </main>
+                        </div>
+                    </div>
+                    <div class="slide">
+                        <div class="myslides">
+                            <main class="main">
+                                <div class="content">
+                                    <h1 class="h2">Access and share your important Information with your codes.</h1>
+                                    <p class="p">Generate,save and utilize your digital QR codes.</p>
+                                    <button class="btn-1">Generate QR code</button>
+                                    <button class="btn-2">Watch Tutorial</button>
+                                </div>
+                                <div class="image">
+                                    <img class="img"src="{% static '/images/Frame2248.jpg' %}"alt="an image"width="450"height="300"/>
+                                </div>
+                            </main>
+                        </div>
+                    </div>
+                    <div class="slide">
+                        <div class="myslides">
+                            <main class="main">
+                                <div class="content">
+                                    <h1 class="h2">You can also create your unigue QR code for your portfolio and other documents.</h1>
+                                    <p class="p">Generate,save and utilize your digital QR codes.</p>
+                                    <button class="btn-1">Generate QR code</button>
+                                    <button class="btn-2">Watch Tutorial</button>
+                                </div>
+                                <div class="image">
+                                    <img class="img"src="{%static '/images/Frame2248.jpg'%}" alt="an image" width="450"height="300"/>
+                                </div>
+                            </main>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
     
-    <h2>welcome</h2>
+        <div class="slide_buttons"></div>
+        <br /><br />
+    
+        <!-- End // .directional_nav -->
+        <!--Companies that trust us-->
+    
+        <div class="companiess">
+          <h2>Companies that Trust Us</h2>
+        </div>
+        <section class="companies">
+          <img src="{% static '/images/uxcel-logo.svg'%}"style="width: 30%; height: 20%"alt=""/>
+          <img style="width: 30%; height: 20%"src="https://upload.wikimedia.org/wikipedia/commons/b/b9/Slack_Technologies_Logo.svg"alt=""/>
+          <img style="width: 30%; height: 20%"src="https://upload.wikimedia.org/wikipedia/commons/f/fc/Indeed_logo.svg"alt=""/>
+        </section>
+        <!-- Our Services section -->
+        <section class="OurServ">
+                <div class="textCenter">
+                    <h2>Our Services</h2>
+                    <p> We always want to provide the best value for you. GenCode gives you the best experience while you generate your QR code.</p>
+                </div>
+                <div class="servCols">
+                    <div class="servCols-subContainer">
+                        <p class="servCols-subhead"><strong>Business and Portfolo Visibilty</strong></p>
+                        <p class="servCols-text"> We give you an online presence so your customers find on the world wide web. Encrypt your portfolio's URL with us.</p>
+                    </div>
+                    <div class="servCols-subContainer">
+                        <p class="servCols-subhead"><strong>Identity Authentication</strong></p>
+                        <p class="servCols-text"> We provide you with an internet presence so that customers maylocate you online. Wecan encrypt the URL for your portfolio.</p>
+                    </div>
+                    <div class="servCols-subContainer">
+                        <p class="servCols-subhead"><strong>Improved Communication</strong></p>
+                        <p class="servCols-text"> Confidential messages, information and the most sensitivedocumentaion can be communicated in text.</p>
+                    </div>
+                </div>
+        </section>
+         <!--Companies that trust Us-->
+        <!-- steps and circle image -->
+        <section class="step">
+            <div>
+                <h2>Easy steps to create your unique QR code</h2>
+            </div>
+            <br />
+            <div class="step-flexed">
+                <div class="flexed-one">
+                    <div class="stepContainer">
+                        <div class="stepContainer-numb">
+                            <p><strong>1</strong></p>
+                        </div>
+                        <div>
+                            <p class="stepContainer-subhead"><strong>Register</strong></p>
+                            <p class="stepContainer-text"> Create an account in order to generate your QR code.</p>
+                        </div>
+                    </div>
+                    <br />
+                    <div class="stepContainer">
+                        <div class="stepContainer-numb subhead-color">
+                            <p> <strong>2</strong></p>
+                        </div>
+                    <div>
+                        <p class="stepContainer-subhead subhead-color"><strong>Input</strong></p>
+                        <p class="stepContainer-text">Choose the file you want to encrypt and input into the screen.</p>
+                    </div>
+                </div>
+                <br />
+            <div class="stepContainer">
+                <div class="stepContainer-numb subhead-color">
+                    <p><strong>3</strong></p>
+                </div>
+                <div>
+                    <p class="stepContainer-subhead"><strong>Download</strong></p>
+                    <p class="stepContainer-text">Download your QR code in your preferred format after it has beengenerated.</p>
+                </div>
+            </div>
+            <br />
+            <div class="stepContainer">
+                <div class="stepContainer-numb subhead-color">
+                    <p><strong>4</strong></p>
+                </div>
+  
+                <div>
+                    <p class="stepContainer-subhead"><strong>Save</strong></p>
+                    <p class="stepContainer-text">You can choose to save in your unique platform and view all thetime.</p>
+                </div>
+             </div>
+        </div>
+ <!-- Circle image in this div -->
+        <div class="circle-container">
+            <img src="{% static '/images/Gencodecircle.png' %}" alt="GenCodeCircle" />
+        </div>
+    </div>
+</section>
 
-    {% if user.is_authenticated %}
-    <h3>hello {{ fname }}</h3>
-    <h4>you're succefully logged in</h4>
-    <button type="submit"><a href="/signout">logout</a></button>
-    {% else %}
-    <button type="submit"><a href="/signin">login</a></button>
-    <button type="submit"><a href="/register">register</a></button>
-    {% endif %}
+<div class="testimonial-head">
+    <h2>Testimonial</h2>
+    <p>Get to know what other people have said about Us</p>
+    <img src="{% static '/images/Line7.jpg'%}  " alt="" />
+</div>
+
+<section class="testimonials">
+    <div class="container">
+        <div class="row">
+            <div class="col-sm-12">
+                <div id="customers-testimonials" class="owl-carousel">
+                    <div class="item">
+                        <div class="shadow-effect">
+                            <div id="profile">
+                                <img class="img-circle" src="{% static '/images/testimonial22.jpg' %}"alt=""/>
+                                <img class="rating" src="{% static '/images/Star rating.png' %}" alt="" />
+                            </div>
+                            <p class="testimonial-text"> If you want your customers or clients to discover more information about the services you offer or a new product
+                            your company has just released, boost your print marketing by adding a QR Code that links to customizable,mobile-friendly documents.</p>
+                            <div class="testimonial-name"> 
+                                EMILY WOODS
+                                <p>Software Developer</p>
+                            </div>
+                        </div>
+                    </div>
+                   
+                    <div class="item">
+                        <div class="shadow-effect">
+                            <div id="profile">
+                                <img class="img-circle"src="{% static '/images/testimonial33.jpg'%}"alt=""/>
+                                <img class="rating" src="{% static '/images/Star rating.png' %}"alt="" />
+                            </div>
+                        <p class="testimonial-text"> Bridge the communication gap between you and your consumers,clients or patients by offering them a direct link to your
+                        online platforms by printing a QR Code on your brochures</p>
+            
+                    <div class="testimonial-name">
+                        JAMES ADELEKE
+                        <p>Product Design</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="item">
+                <div class="shadow-effect">
+                    <div id="profile">
+                        <img class="img-circle"src="{% static '/images/testimonial44.jpg'%}"alt=""/>
+                        <img class="rating" src="{% static '/images/Star rating.png' %}" alt="" />
+                    </div>
+
+                    <p class="testimonial-text"> By using GenCode QR Code, you can improve your services and improve customer experience by allowing them to provide you
+                    with helpful comments and ratings with just one scan </p>
+                <div class="testimonial-name">
+                    SEUN AKIN
+                    <p>Photographer</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="item">
+            <div class="shadow-effect">
+                <div id="profile">
+              <img
+                class="img-circle"
+                src="{% static '/images/testimonial55.jpg' %}"
+                alt=""
+              />
+              <img class="rating" src="{% static '/images/Star rating.png' %}" alt="" />
+            </div>
+            <p class="testimonial-text"> With GenCode customizable colour QR Code, you can make your QR Code match your brochure’s design or your company’s brand
+                identity. When you start designing your QR Code, you will be offered a wide variety of colour and download option.
+            </p>
+            <div class="testimonial-name">
+              JOHN OWEN
+              <p>Brand Influencer</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="item">
+          <div class="shadow-effect">
+            <div id="profile">
+              <img
+                class="img-circle"
+                src="{% static '/images/testimonial11.jpg' %}"
+                alt=""
+              />
+              <img class="rating" src="{% static '/images/Star rating.png' %}" alt="" />
+            </div>
+            <p class="testimonial-text">
+              Just like with flyer promotional campaigns, running a
+              successful informational campaign with brochures means
+              capturing your audience’s attention with eye-catching
+              visuals, an effective CTA message, and an informative,
+              well-designed QR Code
+            </p>
+            <div class="testimonial-name">
+              MARY OLIVE
+              <p>Graphic Designer</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+</section>
+<section class="instaboxall">
+<div class="instantbox">
+  <h2>Instantly scan your material for free</h2>
+  <p>
+    Add editable and trackable QR codes on anything you want want with
+    full branding and customizable features
+  </p>
+  <button class="genbtn">Generate QR code</button>
+</div>
+</section>
+<footer>
+<div class="contents">
+  <div class="top">
+    <section>
+      <div class="company-info">
+        <img class="footerimg" src="{% static '/images/Whitelogo.png'%}"alt="Company-Logo"/>
+      </div>
+      <div class="social-media">
+        <a href="#" class="fa fa-instagram"></a>
+        <a href="#" class="fa fa-twitter"></a>
+        <a href="#" class="fa fa-linkedin"></a>
+      </div>
+    </section>
+    <div class="link-boxes">
+      <ul class="box">
+        <li class="link_name">About</li>
+        <li><a href="#">About Us</a></li>
+        <li><a href="#">Our Services</a></li>
+        <li><a href="#">Contact Us</a></li>
+        <li><a href="#">Support</a></li>
+      </ul>
+      <ul class="box">
+        <li class="link_name">Product</li>
+        <li><a href="#">Why Gencode</a></li>
+        <li><a href="#">How it works</a></li>
+        <li><a href="#">APIs</a></li>
+      </ul>
+      <ul class="box">
+        <li class="link_name">Support</li>
+        <li><a href="#">Terms of Use</a></li>
+        <li><a href="#">Privacy</a></li>
+        <li><a href="/faq">FAQs</a></li>
+        <li><a href="#">Support</a></li>
+      </ul>
+      <ul class="box input-box">
+        <li class="link_name">Contact Us</li>
+        <li>
+          <label for="email">Send an email to get a reply from us!</label>
+          <input
+            type="text"
+            id="email"
+            name="email"
+            placeholder="Enter your email here"
+          />
+          <button onclick="location.href='/contact'">contact us</button>
+        </li>
+      </ul>
+    </div>
+  </div>
+  <div class="bottom">
+    <span>© 2022 GenCode|Terms|Privacy</span>
+  </div>
+</div>
+</footer>
+      
     
     
+   
+    {% endblock %} 
+    <script src="//cdnjs.cloudflare.com/ajax/libs/jquery/2.2.2/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.1.1/owl.carousel.min.js"></script>
+    <script src="{% static '/js/testimonial.js' %}"></script>
+    <script src="{% static '/js/navbar.js' %}"></script>
+    <script src="{%static '/js/herosection2.js'%}"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/jquery@3.6.0/dist/jquery.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/js/bootstrap.bundle.min.js"></script>
 </body>
 </html>

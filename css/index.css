@@ -1,6 +1,13 @@
 body {
   font-family: outfit;
 }
+.servCols-subContainer svg{
+  width: 19%;
+}
+
+.image svg{
+  width: 70%;
+}
 /*nav bar*/
 .nav-row {
   display: flex;

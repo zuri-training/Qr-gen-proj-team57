@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Gen Code API</title>
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css?family=Outfit"
+    />
+    
+    <link rel="stylesheet" href="./css/api.css"/>
+
+    <style>
+      body {
+        padding: 1%;
+        margin: 10%;
+        font-family: outfit;
+        background-color: #f3fafd;
+      }
+      .allbox {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+      }
+      h1 {
+        color: #163037;
+        font-family: outfit;
+      }
+      .textbox {
+        text-align: center;
+      }
+    </style>
+  </head>
+  <body>
+  <main>
+      <div class="allbox">
+      <div class="textbox">
+        <h1>GenCode API</h1>
+        <p>
+          With our API, You can now generate QRCode on your webites.</p> <p>QRCode just
+          got easier!</p>
+        </p>
+      </div>
+      <br>
+      <hr>
+      <div>
+        <h2>What is a QR Code?</h2>
+        <p>A QRCode is a 2-D square-shaped black and white bar code that can be read by smartphones. A QRCode 
+          can store up to 4296 characters or 7089 digits in a single code making it
+          viable to hold large amouts of content.
+        </p>
+        <br>
+        <hr>
+        <h2>What features does GenCode API gives access to?
+           </h2>
+           <ul><li><h3>Colored QRCode Generation</h3></li>
+          <p>Instead of the regular  black and white, you can add some colors to your QRCode to make 
+            it more attractive. You just have to select your preferred colors.
+            <b>Beware that using lighter background-color for your QRCode disrupt some QRCode Scanner from scanning</b>
+          </p>
+          </ul>
+           
+          <ul>
+            <li><h3>More download formats</h3></li>
+             <p>After generating your QRCode, your Qrcode is 
+            available for download in these formats:PDF,PNG 
+            and JPEG.
+
+          </ul>
+         
+          </p> 
+          <ul>
+            <li><h3>Share QRCode</h3></li>
+             <p>You can also share your code across your preferred social media platform.</p> 
+      
+          </ul>
+         </div>
+      <section>
+        <br>
+        <hr>
+        <h2>Follow this easy steps to add GenCode QRCode Generator</h2>
+        <li>Copy the below code into HTML</li>
+        <br />
+      </section>
+      <iframe
+        src="https://carbon.now.sh/embed?bg=rgba%28171%2C+184%2C+195%2C+1%29&t=monokai&wt=none&l=htmlmixed&width=680&ds=true&dsyoff=57px&dsblur=25px&wc=true&wa=true&pv=0px&ph=0px&ln=false&fl=1&fm=Hack&fs=10px&lh=134%25&si=false&es=2x&wm=false&code=%253C%21--Simple%2520QrCode%2520Generator%252C%2520You%2520can%2520beautify%2520to%2520taste%2520in%2520css.%250Acopy%2520and%2520paste%2520inside%2520body--%253E%250A%250A%253Cdiv%2520class%253D%2522all%2522%253E%250A%2520%2520%2520%2520%2520%2520%253Ch1%253EQRcode%2520Generator%253C%252Fh1%253E%250A%2520%2520%2520%2520%2520%2520%253Ctextarea%2520name%253D%2522text%2522%2520id%253D%2522text%2522%2520cols%253D%252230%2522%2520rows%253D%25223%2522%2520plac%253E%253C%252Ftextarea%253E%250A%2520%2520%2520%2520%2520%2520%253Clabel%2520for%253D%2522text%2522%253EWidth%253C%252Flabel%253E%250A%2520%2520%2520%2520%2520%2520%253Cinput%2520type%253D%2522text%2522%2520id%253D%2522width%2522%2520value%253D%2522256%2522%2520%252F%253E%250A%2520%2520%2520%2520%2520%2520%253Clabel%2520for%253D%2522text%2522%253E%2520Height%253C%252Flabel%253E%250A%2520%2520%2520%2520%2520%2520%253Cinput%2520type%253D%2522text%2522%2520id%253D%2522height%2522%2520value%253D%2522256%2522%2520%252F%253E%250A%2520%2520%2520%2520%2520%2520%253Clabel%2520for%253D%2522color%2522%253E%2520Select%2520Primary%2520Color%253C%252Flabel%253E%250A%2520%2520%2520%2520%2520%2520%253Cinput%250A%2520%2520%2520%2520%2520%2520%2520%2520type%253D%2522color%2522%250A%2520%2520%2520%2520%2520%2520%2520%2520id%253D%2522dark%2522%250A%2520%2520%2520%2520%2520%2520%2520%2520value%253D%2522%2523000000%2522%250A%2520%2520%2520%2520%2520%2520%2520%2520placeholder%253D%2522Primary%2520Color%2522%250A%2520%2520%2520%2520%2520%2520%252F%253E%250A%2520%2520%2520%2520%2520%2520%253Clabel%2520for%253D%2522color%2522%253ESelect%2520Secondary%2520Color%253C%252Flabel%253E%250A%2520%2520%2520%2520%2520%2520%253Cinput%2520type%253D%2522color%2522%2520id%253D%2522light%2522%2520value%253D%2522%2523ffffff%2522%2520%252F%253E%250A%2520%2520%2520%2520%2520%2520%253Cbutton%2520id%253D%2522generate%2522%253EGenerate%253C%252Fbutton%253E%250A%250A%2520%2520%2520%2520%2520%2520%253Ca%250A%2520%2520%2520%2520%2520%2520%2520%2520id%253D%2522download%2522%250A%2520%2520%2520%2520%2520%2520%2520%2520onclick%253D%2522download%28this%29%253B%2522%250A%2520%2520%2520%2520%2520%2520%2520%2520download%253D%2522Qrcode.jpeg%2522%250A%2520%2520%2520%2520%2520%2520%2520%2520style%253D%2522display%253A%2520none%2522%250A%2520%2520%2520%2520%2520%2520%2520%2520%253EDownload%2520Jpeg%253C%252Fa%253E%250A%253C%252Fdiv%253E%250A%2520%2520%2520%2520%2520%2520%2520%2520%2520%2520%2520%2520%2520%2520%2520%250A%253Cdiv%2520id%253D%2522qrcode%2522%253E%253C%252Fdiv%253E%250A%250A%253Cscript%2520src%253D%2522https%253A%252F%252Fcdn.jsdelivr.net%252Fnpm%252Fdavidshimjs-qrcodejs%25400.0.2%252Fqrcode.min.js%2522%253E%253C%252Fscript%253E"
+        style="
+          width: auto;
+          height: 500px;
+          border: 0;
+          transform: scale(1);
+          overflow: hidden;
+        "
+        sandbox="allow-scripts allow-same-origin"
+      >
+      </iframe>
+      <br />
+      <section>
+        <li>Copy the below code into body tag in your JavaScript</li>
+        <br>
+        </section>
+        <iframe
+         src="https://carbon.now.sh/embed?bg=rgba%28171%2C184%2C195%2C1%29&t=monokai&wt=none&l=javascript&width=680&ds=true&dsyoff=57px&dsblur=25px&wc=true&wa=true&pv=0px&ph=0px&ln=false&fl=1&fm=Hack&fs=10px&lh=134%25&si=false&es=2x&wm=false&code=%253C%21--Simple%2520QrCode%2520Generator%252Ccopy%2520and%2520paste%2520inside%2520your%2520JavaScript--%253E%250A%250Aconst%2520qrcodeEl%2520%253D%2520document.querySelector%28%2522%2523qrcode%2522%29%253B%250Aconst%2520textEl%2520%253D%2520document.querySelector%28%2522%2523text%2522%29%253B%250Aconst%2520generateEl%2520%253D%2520document.querySelector%28%2522%2523generate%2522%29%253B%250Aconst%2520widthEl%2520%253D%2520document.querySelector%28%2522%2523width%2522%29%253B%250Aconst%2520heightEl%2520%253D%2520document.querySelector%28%2522%2523height%2522%29%253B%250Aconst%2520darkEl%2520%253D%2520document.querySelector%28%2522%2523dark%2522%29%253B%250Aconst%2520lightEl%2520%253D%2520document.querySelector%28%2522%2523light%2522%29%253B%250Aconst%2520downloadEl%2520%253D%2520document.querySelector%28%2522%2523download%2522%29%253B%250A%250A%250AgenerateEl.addEventListener%28%2522click%2522%252C%2520generate%29%253B%250A%250Afunction%2520generate%28%29%2520%257B%250A%2520%2520qrcodeEl.innerHTML%2520%253D%2520%2560%2560%253B%250A%2520%2520new%2520QRCode%28qrcodeEl%252C%2520%257B%250A%2520%2520%2520%2520text%253A%2520textEl.value%252C%250A%2520%2520%2520%2520width%253A%2520widthEl.value%252C%250A%2520%2520%2520%2520height%253A%2520heightEl.value%252C%250A%2520%2520%2520%2520colorDark%253A%2520darkEl.value%252C%250A%2520%2520%2520%2520colorLight%253A%2520lightEl.value%252C%250A%2520%2520%257D%29%253B%250A%250A%2520%2520download%28%29%253B%250A%257D%250A%250Afunction%2520download%28%29%2520%257B%250A%2520%2520const%2520canvasEl%2520%253D%2520qrcodeEl.querySelector%28%2522canvas%2522%29%253B%250A%2520%2520let%2520data%2520%253D%2520canvasEl.toDataURL%28%2522image%252Fpng%2522%29%253B%250A%250A%2520%2520downloadEl.setAttribute%28%2522href%2522%252C%2520data%29%253B%250A%2520%2520downloadEl.style.display%2520%253D%2520%2522inline-block%2522%253B"
+         style="width: auto; height: 528px; border:0; transform: scale(1); overflow:hidden;"
+         sandbox="allow-scripts allow-same-origin">
+        </iframe>
+        <br>
+        <li>Enjoy!</li>
+        <br />
+
+      
+    </div>
+  </main>
+     <footer>
+      <div class="contents">
+        <div class="top">
+          <section>
+            <div class="company-info">
+              <img
+                class="footerimg"
+                src="/images/White logo.png"
+                alt="Company-Logo"
+              />
+            </div>
+            <div class="social-media">
+              <a href="#" class="fa fa-instagram"></a>
+              <a href="#" class="fa fa-twitter"></a>
+              <a href="#" class="fa fa-linkedin"></a>
+            </div>
+          </section>
+          <div class="link-boxes">
+            <ul class="box">
+              <li class="link_name">About</li>
+              <li><a href="#">About Us</a></li>
+              <li><a href="#">Our Services</a></li>
+              <li><a href="#">Contact Us</a></li>
+              <li><a href="#">Support</a></li>
+            </ul>
+            <ul class="box">
+              <li class="link_name">Product</li>
+              <li><a href="#">Why Gencode</a></li>
+              <li><a href="#">How it works</a></li>
+              <li><a href="#">APIs</a></li>
+            </ul>
+            <ul class="box">
+              <li class="link_name">Support</li>
+              <li><a href="#">Terms of Use</a></li>
+              <li><a href="#">Privacy</a></li>
+              <li><a href="#">FAQs</a></li>
+              <li><a href="#">Support</a></li>
+            </ul>
+            <ul class="box input-box">
+              <li class="link_name">Contact Us</li>
+              <li>
+                <label for="email">Send an email to get a reply from us!</label>
+                <input
+                  type="text"
+                  id="email"
+                  name="email"
+                  placeholder="Enter your email here"
+                />
+              </li>
+            </ul>
+          </div>
+        </div>
+        <div class="bottom">
+          <span>© 2022 GenCode|Terms|Privacy</span>
+        </div>
+      </div>
+    </footer>
+  </body>
+</html>

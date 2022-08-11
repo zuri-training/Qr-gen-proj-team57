@@ -1,0 +1,15 @@
+I'm Oluwafemi 'Dunsin Ajakaye
+These are my contributions toward the project.
+ 
+Built the Qrcode generator with javascript, 
+Mapping and maintaining out team github repo, 
+Lead team Presentation, 
+Buid API, 
+drew Database Schema.
+worked on team's project documentation.
+built Qrcode generator api
+worked on and merged the landing page also settings prompt with javascript.
+Help with backend (Django)
+
+please copy link view landing page
+https://zuri-training.github.io/Qr-gen-proj-team57/

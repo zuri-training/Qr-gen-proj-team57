@@ -3,6 +3,7 @@ from django.shortcuts import redirect, render
 from django.contrib.auth.models import User
 from django.contrib import messages
 from django.contrib.auth import authenticate, login, logout
+<<<<<<< HEAD
 from .forms import ContactForm, UserUpdateForm, ProfileUpdateForm
 from django.core.mail import send_mail, BadHeaderError
 from django.contrib.auth.forms import PasswordResetForm
@@ -11,6 +12,15 @@ from django.db.models.query_utils import Q
 from django.utils.http import urlsafe_base64_encode
 from django.contrib.auth.tokens import default_token_generator
 from django.utils.encoding import force_bytes
+=======
+import logging, traceback
+from hitcount.views import HitCountDetailView
+from requests import post
+# from history.mixins import objectViewMixin
+
+logger = logging.getLogger('django')
+
+>>>>>>> 6016203fe5a9fce2e2b7045f849a5cca1226fccf
 
 # Create your views here.
 def home(request):
@@ -47,10 +57,10 @@ def register(request):
         myuser = User.objects.create_user(username, email, pass1)
         myuser.first_name = fname
         myuser.last_name = lname
-        
+
         myuser.save()
         messages.success(request, "account created succesfully")
-
+        logger.info('user {} registered successfully {}'.format(myuser.first_name, request.META.get('HTTP_REFERER')))
         return redirect('signin')
     
     
@@ -66,11 +76,16 @@ def signin(request):
         if user is not None:
             login(request, user)
             fname= user.first_name
+<<<<<<< HEAD
             messages.info(request, f"You are now logged in as {username}.")
+=======
+            logger.info('user {} signed in successfully {}'.format(user.first_name, request.META.get('HTTP_REFERER')))
+>>>>>>> 6016203fe5a9fce2e2b7045f849a5cca1226fccf
             return render(request,  'authentication/index.html',{'fname':fname})
 			
         else:
-            messages.error(request, "incorrect credentials")
+            messages.error(request, user, "incorrect credentials")
+            logger.info('user {} was unable to sign in {}'.format(username, request.META.get('HTTP_REFERER')))
             return redirect('home')
     
 
@@ -80,8 +95,10 @@ def signin(request):
 def signout(request):
     logout(request)
     messages.success(request, "logout successful")
+    logger.info('user logged out')
     return redirect('home')
 
+<<<<<<< HEAD
 
 def contact(request):
 	if request.method == 'POST':
@@ -172,3 +189,10 @@ def profile(request):
     }
 
 	return render(request, 'authentication/profile.html')
+=======
+# class PostDetailView(HitCountDetailView):
+#     model = post
+#     template_name = 'authentication/signin.html'
+#     slug_field = 'slug'
+#     count_hit = True
+>>>>>>> 6016203fe5a9fce2e2b7045f849a5cca1226fccf

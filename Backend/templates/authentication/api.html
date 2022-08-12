@@ -5,12 +5,13 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Gen Code API</title>
+    {% load static %}
     <link
       rel="stylesheet"
       href="https://fonts.googleapis.com/css?family=Outfit"
     />
     
-    <link rel="stylesheet" href="./css/api.css"/>
+    <!-- <link rel="stylesheet" href="./css/api.css"/> -->
 
     <style>
       body {
@@ -120,7 +121,7 @@
             <div class="company-info">
               <img
                 class="footerimg"
-                src="/images/White logo.png"
+                src="{% static '/images/Whitelogo.png'%}"
                 alt="Company-Logo"
               />
             </div>

@@ -53,18 +53,18 @@ INSTALLED_APPS = [
     'django.contrib.messages',
     'django.contrib.staticfiles',
     'authentication',
-<<<<<<< HEAD
     'django.contrib.sites', 
     'allauth',
     'allauth.account',
     'allauth.socialaccount',
     'allauth.socialaccount.providers.google',
     'crispy_forms',
-=======
+    
+  
+  
     'history',
-    'user_visit',
-    'hitcount',
->>>>>>> 6016203fe5a9fce2e2b7045f849a5cca1226fccf
+    
+
 ]
 
 CRISPY_TEMPLATE_PACK = 'bootstrap4'
@@ -77,7 +77,7 @@ MIDDLEWARE = [
     'django.contrib.auth.middleware.AuthenticationMiddleware',
     'django.contrib.messages.middleware.MessageMiddleware',
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
-    'user_visit.middleware.UserVisitMiddleware',
+    
 ]
 
 ROOT_URLCONF = 'qrcodegen.urls'
@@ -159,7 +159,7 @@ MEDIA_URL = '/media/'
 
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 
-<<<<<<< HEAD
+
 SITE_ID = 1
 LOGIN_REDIRECT_URL = '/'
 
@@ -187,7 +187,7 @@ AUTHENTICATION_BACKENDS = [
 ]
 
 EMAIL_BACKEND = 'django.core.mail.backends.console.EmailBackend'
-=======
+
 LOGGING = {
     'version':1,
     'loggers': {
@@ -211,6 +211,7 @@ LOGGING = {
         }
 
     }
- }
+}
 
->>>>>>> 6016203fe5a9fce2e2b7045f849a5cca1226fccf
+
+

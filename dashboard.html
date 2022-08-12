@@ -1,0 +1,210 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Dashboard</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Outfit:wght@100;200&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="css/dashboard.css" />
+    <script type="text/javascript" src="https://platform-api.sharethis.com/js/sharethis.js#property=62f60f41f4696f0019bda102&product=inline-share-buttons" async="async"></script>
+  </head>
+  <body>
+    <main class="dashboard-container">
+      <div class="dashboard__sidebar">
+        <div class="sidebar__content">
+          <div class="top">
+            <img src="images/Frame 2244logo.png" alt="" style="width: 10rem" />
+            <a href="#"><span>&#8592;</span>Back</a><br />
+          </div>
+          <img
+            class="dashboard-image"
+            src="images/dashboard.png"
+            alt="dashboard-icon"
+          />
+          Dashboard
+        </div>
+        <a href="#"
+          ><div class="sidebar__content">
+            <img src="images/user.png" alt="profile" />
+            Profile
+          </div></a
+        >
+        <hr />
+        <a href="#"
+          ><div class="sidebar__content">
+            <img src="images/qr-code.png" alt="QR code" />
+            View QR Codes
+          </div></a
+        >
+        <hr />
+        <a href="settings/setting.html"
+          ><div class="sidebar__content">
+            <img src="images/cogwheel.png" alt="setting" />
+            Settings
+          </div></a
+        >
+        <hr />
+        <a href="#"
+          ><div class="sidebar__content">
+            <img src="images/support.png" alt="support" />
+            Help and Support
+          </div></a
+        >
+        <hr />
+        <br />
+        <button class="dashboard-sidebar__button__home">
+          <img src="images/home.png" alt="home" />
+          Back to Home</button
+        ><br />
+        <button class="dashboard-sidebar__button__exit">
+          <img src="images/logout.png" alt="exit" />
+          Logout
+        </button>
+      </div>
+      <div class="dashboard-main__contents">
+        <div class="header">
+          <input
+            type="search"
+            placeholder=" Search for QR Code"
+            name="search"
+          />
+          <div class="name-email__container">
+            <p>Kemisola Abdul</p>
+            <span>kemisolaabdul@gmail.com</span>
+          </div>
+        </div>
+        <h1>Generate QR Code</h1>
+        <div class="link-container">
+          <a href="#"
+            ><div class="link">
+              <img src="images/link.png" alt="" />
+              URL
+            </div></a
+          >
+          <a href="#"
+            ><div class="link">
+              <img src="images/file.png" alt="" />
+              TEXT
+            </div></a
+          >
+          <div class="link">
+            <img src="images/email.png" alt="" />
+            E-MAIL
+          </div>
+          <a href="#"
+            ><div class="link">
+              <img src="images/id-card.png" alt="" />
+              CONTACT CARD
+            </div></a
+          >
+          <a href="#">
+            <div class="link">
+              <img src="images/placeholder.png" alt="" />
+              LOCATION
+            </div>
+          </a>
+          <!-- <a href="#"
+            ><div class="link">
+              <img src="image-gallery.png" alt="" />
+              IMAGES
+            </div></a
+          >
+          <a href="#"
+            ><div class="link">
+              <img src="pdf.png" alt="" />
+              PDF
+            </div></a
+          >
+          <a href="#"
+            ><div class="link">
+              <img src="sms.png" alt="" />
+              SMS
+            </div></a
+          > -->
+        </div>
+        <div class="dashboard-form">
+          
+          <label for="">Input</label>
+      <input name="text" id="text" cols="30" rows="3" placeholder="Input your link,phone number or text"></input>
+     <br>
+      <label for="text">Width</label>
+      <input type="text" id="width" value="256" />
+      <br>
+      <label for="text"> Height</label>
+      <input type="text" id="height" value="256" />
+      <br>
+      <label for="color"> Select Primary Color</label>
+      <br>
+      <input
+        type="color"
+        id="dark"
+        value="#000000"
+        placeholder="Primary Color"
+      />
+      <br>
+      <label for="color">Select Secondary Color</label>
+      <br>
+      <input type="color" id="light" value="#ffffff" />
+      <br>
+      <button id="generate" class="generate-btn" >Generate</button>
+      
+      <br>
+      <br>
+      <br>
+      <div class="downloads">
+      <a
+        id="download"
+        onclick="download(this);"
+        download="Qrcode.jpeg"
+        style="display: none"
+        ><button class="downloadbtns">Download Jpeg</button></a
+      >
+
+      <br>
+
+      <a
+        id="downloadd"
+        onclick="download(this);"
+        download="Qrcode.png"
+        style="display: none"
+        href=""
+        ><button class="downloadbtns">Download Png</button>
+      </a>
+
+      <br>
+
+      <a
+        id="downloaddd"
+        onclick="download(this);"
+        download="Qrcode.pdf"
+        style="display: none"
+        ><button class="downloadbtns">Download PDF</button>
+      </a>
+    </div>
+      <br>
+      <div id="qrcode"></div>
+      <div class="share">
+        <p>Share via Social Media</p>
+      </div>
+      
+        <div class="sharethis-inline-share-buttons"></div>
+        
+      </div>
+    </main>
+      <script src="https://cdn.jsdelivr.net/npm/davidshimjs-qrcodejs@0.0.2/qrcode.min.js"></script>
+      
+      <script src="https://use.fontawesome.com/ba1226c86c.js"></script>
+      
+      <script src="/qrcode gen/qrcode2.js"></script>
+      <script
+    src="https://kit.fontawesome.com/f0e05bc3a9.js"
+    crossorigin="anonymous"
+      >   </script>
+  </body>
+</html>

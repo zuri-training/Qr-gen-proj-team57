@@ -5,13 +5,15 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Dashboard</title>
+    {% load static %}
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
       href="https://fonts.googleapis.com/css2?family=Outfit:wght@100;200&display=swap"
       rel="stylesheet"
     />
-    <link rel="stylesheet" href="css/dashboard.css" />
+    
+    <link rel="stylesheet" href=" {%static '/css/dashboard.css' %}" />
     <script type="text/javascript" src="https://platform-api.sharethis.com/js/sharethis.js#property=62f60f41f4696f0019bda102&product=inline-share-buttons" async="async"></script>
   </head>
   <body>
@@ -19,53 +21,55 @@
       <div class="dashboard__sidebar">
         <div class="sidebar__content">
           <div class="top">
-            <img src="images/Frame 2244logo.png" alt="" style="width: 10rem" />
-            <a href="#"><span>&#8592;</span>Back</a><br />
+            <img src="{% static '/images/Frame2244logo.png'%}" alt="" style="width: 10rem" />
+            <a href="/"><span>&#8592;</span>Back</a><br />
           </div>
           <img
             class="dashboard-image"
-            src="images/dashboard.png"
+            src="{% static '/images/dashboard.png' %}"
             alt="dashboard-icon"
           />
           Dashboard
         </div>
-        <a href="#"
+        <a href="/profile"
           ><div class="sidebar__content">
-            <img src="images/user.png" alt="profile" />
+            <img src="{% static '/images/user.png' %}" alt="profile" />
             Profile
           </div></a
         >
         <hr />
-        <a href="#"
+        <a href="/profile"
           ><div class="sidebar__content">
-            <img src="images/qr-code.png" alt="QR code" />
+            <img src="{% static '/images/qr-code.png' %}" alt="QR code" />
             View QR Codes
           </div></a
         >
         <hr />
-        <a href="settings/setting.html"
+        <a href="/setting"
           ><div class="sidebar__content">
-            <img src="images/cogwheel.png" alt="setting" />
+            <img src="{% static '/images/cogwheel.png' %}" alt="setting" />
             Settings
           </div></a
         >
         <hr />
         <a href="#"
           ><div class="sidebar__content">
-            <img src="images/support.png" alt="support" />
+            <img src="{% static '/images/support.png' %}" alt="support" />
             Help and Support
           </div></a
         >
         <hr />
         <br />
+        <a href="/">
         <button class="dashboard-sidebar__button__home">
-          <img src="images/home.png" alt="home" />
-          Back to Home</button
-        ><br />
+          <img src="{% static '/images/home.png' %}" alt="home" />
+          Back to Home</button> </a> 
+        <br />
+        <a href="/signout">
         <button class="dashboard-sidebar__button__exit">
-          <img src="images/logout.png" alt="exit" />
+          <img src="{% static '/images/logout.png' %}" alt="exit" />
           Logout
-        </button>
+        </button> </a>
       </div>
       <div class="dashboard-main__contents">
         <div class="header">
@@ -74,38 +78,38 @@
             placeholder=" Search for QR Code"
             name="search"
           />
-          <div class="name-email__container">
+          <!--<div class="name-email__container">
             <p>Kemisola Abdul</p>
             <span>kemisolaabdul@gmail.com</span>
-          </div>
+          </div>-->
         </div>
         <h1>Generate QR Code</h1>
         <div class="link-container">
           <a href="#"
             ><div class="link">
-              <img src="images/link.png" alt="" />
+              <img src="{% static '/images/link.png' %}" alt="" />
               URL
             </div></a
           >
           <a href="#"
             ><div class="link">
-              <img src="images/file.png" alt="" />
+              <img src="{% static '/images/file.png' %}" alt="" />
               TEXT
             </div></a
           >
           <div class="link">
-            <img src="images/email.png" alt="" />
+            <img src="{% static '/images/email.png' %}" alt="" />
             E-MAIL
           </div>
           <a href="#"
             ><div class="link">
-              <img src="images/id-card.png" alt="" />
+              <img src="{%static '/images/id-card.png' %}" alt="" />
               CONTACT CARD
             </div></a
           >
           <a href="#">
             <div class="link">
-              <img src="images/placeholder.png" alt="" />
+              <img src="{% static '/images/placeholder.png' %}" alt="" />
               LOCATION
             </div>
           </a>
@@ -201,7 +205,7 @@
       
       <script src="https://use.fontawesome.com/ba1226c86c.js"></script>
       
-      <script src="/qrcode gen/qrcode2.js"></script>
+      <script src="{% static '/js/qrcode2.js' %}"></script>
       <script
     src="https://kit.fontawesome.com/f0e05bc3a9.js"
     crossorigin="anonymous"

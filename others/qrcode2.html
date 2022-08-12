@@ -5,6 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>QRcode</title>
+    {% load static %}
     <link
       rel="stylesheet"
       href="https://fonts.googleapis.com/css?family=Outfit"
@@ -141,9 +142,9 @@
         <span class="button facebook"><i class="fa fa-facebook"></i></span>
       </div>
       <script src="https://cdn.jsdelivr.net/npm/davidshimjs-qrcodejs@0.0.2/qrcode.min.js"></script>
-      <script src="qrcode.js" async defer></script>
+      <script src="{% static '/js/qrcode.js' %}" async defer></script>
       <script src="https://use.fontawesome.com/ba1226c86c.js"></script>
-      <script src="qrcode2.js"></script>
+      <script src="{% static '/js/qrcode2.js' %}"></script>
     </div>
   </body>
 </html>

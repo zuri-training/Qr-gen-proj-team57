@@ -4,6 +4,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>settingpage</title>
+    {% load static %}
     <link
     rel="stylesheet"
     href="https://fonts.googleapis.com/css?family=Outfit"/>
@@ -12,47 +13,46 @@
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
     />
-    <link rel="stylesheet" href="css/setting-2.css">
+    <link rel="stylesheet" href="{% static 'css/setting-3.css' %}">
 
 </head>
 <body>
     <div class="nav-row">
       <div class="logo-div">
-        <img src="images/Blue logo.png" alt="" class="logo" />
-        <div class="back"><p><a href="setting.html"><img src="images/arrow-left-solid.svg" width="10" height="10" alt=""></i>Back</a></p></div>
-        
+        <img src=" {% static 'images/Blue logo.png' %}" alt="" class="logo" />
+        <div class="back"><p><a href="/setting"><img src=" {% static 'images/arrow-left-solid.svg' %}" width="10" height="10" alt=""></i>Back</a></p></div>
       </div>
       <nav class="nav">
         <div class="nav-list">
-          <a class="nav-a" href="#">Home</a>
-          <a class="nav-a" href="#">Services</a>
-          <a class="nav-a" href="contactus.html">Contact Us</a>
-          <a class="nav-a" href="faq.html">FAQs</a>
-          <a class="nav-a" href="#">API</a>
+          <a class="nav-a" href="/">Home</a>
+          <a class="nav-a" href="/services">Services</a>
+          <a class="nav-a" href="/contactus">Contact Us</a>
+          <a class="nav-a" href="/faq">FAQs</a>
+          <a class="nav-a" href="/api">API</a>
         </div>
       </nav>
       <div class="btns">
-        <a href="#"><button class="white-btn">Log In</button></a>
-        <a href="#"><button class="blue-btn">Register</button></a>
+        <a href="/signin"><button class="white-btn">Log In</button></a>
+        <a href="/register"><button class="blue-btn">Register</button></a>
       </div>
     </div>
     <div class="setting-content">
         <div class="heading">
           <br>
           <h2 class="h2">Settings</h2>
-          <h5 class="h5">Change Account Password</h5>
+          <h5 class="h5">Close Account</h5>
         </div>
         <div class="forms">
-          <p class="p">
-            Enter a new password consisting of at least <br> six character.A strong password includes <br> upper and lower case letters and numbers.
+            <h4 class="h4">
+                Note:By closing your account, access to QR <br> code Generator features will be lost permanently.<br> This action cannot be undone.
+            </h4>
+          <p class="optional">
+            Please let us know why you want to delete your account(optional)
           </p>
-          <form action="#">
-            <label for="password" style="color:black;" class="label-1">Password</label>
-            <input type="password" placeholder="A1bcD!E4yxz" class="input">
-            <br>
-            <label for="repeatpassword" style="color:black;" class="label-2">Repeat Password</label>
-            <input type="password" placeholder="A1bcD!E4yxz" class="input">
-          </form>
+          <textarea name="message" id="" cols="45" rows="10" placeholder="Your Message"></textarea>
+          <p class="agreement">
+            By clicking on 'close my account' button,I understand <br> and agree that my account will be permanently deleted
+          </p>
           <button class="confirm">Confirm</button>
         </div>
       </div>
@@ -63,7 +63,7 @@
               <div class="company-info">
                 <img
                   class="footerimg"
-                  src="images/White logo.png"
+                  src=" {% static 'images/Whitelogo.png' %}"
                   alt="Company-Logo"
                 />
               </div>
@@ -113,6 +113,6 @@
           </div>
         </div>
       </footer>
-      <script src="setting-2.js"></script>
+      <script src=" {% static 'js/setting-3.js' %}"></script>
 </body>
 </html>

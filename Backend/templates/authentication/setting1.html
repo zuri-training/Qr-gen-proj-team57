@@ -4,36 +4,34 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>settingpage</title>
+    {% load static %}
     <link
     rel="stylesheet"
     href="https://fonts.googleapis.com/css?family=Outfit"/>
 
-    <link
-      rel="stylesheet"
-      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
-    />
-    <link rel="stylesheet" href="css/setting-1.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"/>
+    <link rel="stylesheet" href=" {% static 'css/setting-1.css' %}"> 
 
 </head>
 <body>
     <div class="nav-row">
       <div class="logo-div">
-        <img src="images/Blue logo.png" alt="" class="logo" />
-        <div class="back"><p><a href="setting.html" class="a-4"><img src="images/arrow-left-solid.svg" width="10" height="10" alt=""></i>Back</a></p></div>
+        <img src="{% static 'images/Blue logo.png' %}" alt="" class="logo" />
+        <div class="back"><p><a href="/setting" class="a-4"><img src=" {% static 'images/arrow-left-solid.svg' %}" width="10" height="10" alt=""></i>Back</a></p></div>
         
       </div>
       <nav class="nav">
         <div class="nav-list">
-          <a class="nav-a" href="#">Home</a>
-          <a class="nav-a" href="#">Services</a>
-          <a class="nav-a" href="contactus.html">Contact Us</a>
-          <a class="nav-a" href="faq.html">FAQs</a>
-          <a class="nav-a" href="#">API</a>
+          <a class="nav-a" href="/">Home</a>
+          <a class="nav-a" href="/services">Services</a>
+          <a class="nav-a" href="/contact">Contact Us</a>
+          <a class="nav-a" href="/faq">FAQs</a>
+          <a class="nav-a" href="/api">API</a>
         </div>
       </nav>
       <div class="btns">
-        <a href="#"><button class="white-btn">Log In</button></a>
-        <a href="#"><button class="blue-btn">Register</button></a>
+        <a href="/signin"><button class="white-btn">Log In</button></a>
+        <a href="/register"><button class="blue-btn">Register</button></a>
       </div>
     </div>
     <div class="setting-content">
@@ -66,7 +64,7 @@
               <div class="company-info">
                 <img
                   class="footerimg"
-                  src="images/White logo.png"
+                  src="{% static 'images/White logo.png' %}"
                   alt="Company-Logo"
                 />
               </div>
@@ -79,22 +77,22 @@
             <div class="link-boxes">
               <ul class="box">
                 <li class="link_name">About</li>
-                <li><a href="#">About Us</a></li>
-                <li><a href="#">Our Services</a></li>
-                <li><a href="#">Contact Us</a></li>
+                <li><a href="/">About Us</a></li>
+                <li><a href="/services">Our Services</a></li>
+                <li><a href="/contact">Contact Us</a></li>
                 <li><a href="#">Support</a></li>
               </ul>
               <ul class="box">
                 <li class="link_name">Product</li>
                 <li><a href="#">Why Gencode</a></li>
                 <li><a href="#">How it works</a></li>
-                <li><a href="#">APIs</a></li>
+                <li><a href="/api">APIs</a></li>
               </ul>
               <ul class="box">
                 <li class="link_name">Support</li>
                 <li><a href="#">Terms of Use</a></li>
                 <li><a href="#">Privacy</a></li>
-                <li><a href="#">FAQs</a></li>
+                <li><a href="/faq">FAQs</a></li>
                 <li><a href="#">Support</a></li>
               </ul>
               <ul class="box input-box">
@@ -116,6 +114,7 @@
           </div>
         </div>
     </footer>
-    <script src="setting-1.js"></script>
+    <script src=" {% static '/js/setting-1.js' %}"></script>  
+   
 </body>
 </html>

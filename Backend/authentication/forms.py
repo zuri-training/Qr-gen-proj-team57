@@ -11,7 +11,8 @@ class ContactForm(forms.Form):
 	email_address = forms.EmailField(widget=forms.EmailInput(attrs={'class': 'contact-us__input-box', 'placeholder':'abcd@wxyz.com'}))
 	message = forms.CharField(widget=forms.Textarea(attrs={'class': 'contact-us__input-box', 'cols':'30', 'placeholder':'Hi, i would like to find out about ...'}))
 
-	
+
+
 class UserUpdateForm(forms.ModelForm):
     username = forms.CharField(max_length=100,
                                required=True,

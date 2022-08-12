@@ -193,3 +193,25 @@ def profile(request):
 def api(request):
     return render(request, 'authentication/api.html')
 
+def dashboard(request):
+    return render(request, 'authentication/dashboard.html')
+
+
+def services(request):
+    return render(request, 'authentication/services.html')
+
+def setting(request):
+    return render(request, 'authentication/setting.html')
+
+def setting1(request):
+    return render(request, 'authentication/setting1.html')
+
+def setting2(request):
+    return render(request, 'authentication/setting2.html')
+
+def setting3(request):
+    return render(request, 'authentication/setting3.html')
+
+def tutorial(request):
+    return render(request, 'authentication/tutorial.html')
+

@@ -4,6 +4,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>servicepage</title>
+    {% load static %}
     <link
     rel="stylesheet"
     href="https://fonts.googleapis.com/css?family=Outfit"/>
@@ -12,51 +13,48 @@
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
     />
-    <link rel="stylesheet" href="css/index.css">
+    <link rel="stylesheet" href="{% static 'css/index.css' %}">
 
 </head>
 <body>
     <div class="nav-row">
       <div class="logo-div">
-         <img src="Blue logo.png" alt="" class="logo" />
-         <div class="back"><p><a href="index.html" class="a-4"><img src="arrow-left-solid.svg" width="10" height="10" alt=""></i>Back</a></p></div>    
+         <img src="{% static '/images/Blue logo.png' %}" alt="" class="logo" />
+         <div class="back"><p><a href="index.html" class="a-4"><img src="{% static  '/images/arrow-left-solid.svg' %}" width="10" height="10" alt=""></i>Back</a></p></div>  
+         
       </div>
+      
 
       <nav class="nav">
         <div class="nav-list">
           <a class="nav-a" href="index.html">Home</a>
           <a class="nav-a" href="#">Services</a>
-          <a class="nav-a" href="contactus.html">Contact Us</a>
-          <a class="nav-a" href="faq.html">FAQs</a>
-          <a class="nav-a" href="api/api.html">API</a>
+          <a class="nav-a" href="/contact">Contact Us</a>
+          <a class="nav-a" href="/faq">FAQs</a>
+          <a class="nav-a" href="/api">API</a>
         </div>
       </nav>
       <div class="btns">
-        <a href="#"><button class="white-btn">Log In</button></a>
-        <a href="#"><button class="blue-btn">Register</button></a>
+        <a href="/signin"><button class="white-btn">Log In</button></a>
+        <a href="/register"><button class="blue-btn">Register</button></a>
       </div>
-      <div class="logo-div">
-        <img
-          style="align-items: left"
-          src="./images/Blue logo.png"
-          alt=""
-          class="logo"
-        />
-      </div>
+      
     </span>
     <div id="mySidenav" class="sidenav">
       <a href="javascript:void(0)" class="closebtn" onclick="closeNav()"
         >&times;</a
       >
       <a href="#">Home</a>
-      <a href="services/services.html">Services</a>
-      <a href="contactus.html">Contact Us</a>
-      <a href="faq.html">FAQs</a>
-      <a href="api/api.html">API</a>
+      <a href="/services">Services</a>
+      <a href="/contactus">Contact Us</a>
+      <a href="/faq">FAQs</a>
+      <a href="/api">API</a>
     </div>
     </div>
+    
 
     <section class="OurServ">
+      
         <div class="textCenter">
           <h2>Our Services</h2>
           <p>
@@ -64,7 +62,7 @@
             the best experience while you generate your QR code.
           </p>
         </div>
-  
+        
         <div class="servCols">
           <div class="servCols-subContainer">
             <svg width="64" height="64" viewBox="0 0 64 64" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -117,7 +115,7 @@
               <div class="company-info">
                 <img
                   class="footerimg"
-                  src="services/White logo.png"
+                  src="{% static  '/images/Whitelogo.png' %}"
                   alt="Company-Logo"
                 />
               </div>
@@ -167,7 +165,7 @@
           </div>
         </div>
       </footer>
-      <script src="main.js"></script>
+      <script src=" {% static '/js/main.js' %}"></script> 
 </body>
 </html>
 </body>

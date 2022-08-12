@@ -1,0 +1,51 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  background-color: #f3fafd;
+  font-family: "Outfit", sans-serif;
+}
+.contact-us__header-content {
+  display: grid;
+  grid-template-rows: 50% 50%;
+  align-items: center;
+  justify-content: center;
+  margin: 2rem auto;
+}
+
+.contact-us__header-content h1 {
+  text-align: center;
+  font-weight: bolder;
+}
+
+.contact-us__header-content p {
+  text-align: center;
+  font-weight: bolder;
+}
+
+.contact-us__form {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0 auto;
+}
+
+.contact-us__input-box {
+  padding: 0.3rem 1.5rem;
+  width: 20rem;
+  line-height: 2;
+  margin: 0.5rem auto;
+  border-radius: 5px;
+  border: 1px solid #81b6c4;
+  box-shadow: 0.5px 0.5px #81b6c4;
+}
+
+.contact-us__btn {
+  width: 20rem;
+  border-radius: 5px;
+  border: 1px solid #81b6c4;
+  padding: 0.6rem 1.5rem;
+  margin: 0rem auto 4rem;
+  background-color: #81b6c4;
+  font-weight: bolder;
+}

@@ -6,5 +6,6 @@ I worked on the following on  backend server side using Python framework Django;
   User Profile
   User change profile (email, profile picture, username)
   Bootstrap  dissmisable alert messages
+  linking of html css pages to Django
   
   

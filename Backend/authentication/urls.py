@@ -11,4 +11,5 @@ urlpatterns = [
     path("faq", views.faq, name="faq"),
     path("password_reset", views.password_reset_request, name="password_reset"),
     path("profile", views.profile, name="profile"),
+    path("api", views.api, name="api"),
 ]

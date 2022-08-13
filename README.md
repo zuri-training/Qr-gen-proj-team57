@@ -1,8 +1,12 @@
-Building a web app to generate user inputs to QrCode.
+![logo](assets/logo.png)
 
-PROJECT NAME: "GENCODE"
-Project languages: JavaScript,Django(python)
-UI/UX - Certified✅
+## Overview
+* A web app to  help users generate QrCodes from their input.
+* PROJECT NAME: `GENCODE`
+* Project languages: 
+> Backend: `JavaScript`,`Django(python)`
+> Frontend: `HTML5`, `CSS3`,`AJAX`. `Javascript`, `Bootstrap`
+> UI/UX - Certified✅
 
 ## Table of Contents
 
@@ -18,6 +22,8 @@ UI/UX - Certified✅
 * [Relevant Links](#relevant-links)
 * [API Details](#api-details)
 * [Questions and Answers](#questions-and-answers)
+* [Project installation](#project-installation)
+* [Featues](#features)
 
 
 ## Acknowledgements
@@ -133,7 +139,7 @@ __Designers__ <br/>
 <br/>
 
 __BackEnd Contributors__ <br/>
-* Lilian Wanjiku
+* Lilian Wanjiku[lilian wanjiku](https://github.com/Lilywd)
 
 * Precious Kingsley Okolaa
 
@@ -150,8 +156,7 @@ __FrontEnd Contributors__ <br/>
 
 * Aderibigbe Omolola(Dahrah)
 
-* Daniel Chibueze Ekeleme
-`https://github.com/DanitoSharp`
+* Daniel Chibueze Ekeleme[Daniel](https://github.com/DanitoSharp)
 
 * Precious Kingsley Okolaa
 
@@ -169,13 +174,13 @@ __FrontEnd Contributors__ <br/>
 ## API Details
 
 ## Questions and Answers
-What is a QR code?
-A Qr code is a 2-D square-shaped black and white bar code
+#### What is a QR code?
+> A Qr code is a 2-D square-shaped black and white bar code
 that can be read by smartphones. QR codes store
 information that can be used to make a call, send a
 message/email, open a website or even redirect a location.
 
-A QR Code can store up to 4296 characters or 7089 digits in
+> A QR Code can store up to 4296 characters or 7089 digits in
 a single code thus making it viable to hold large amounts of
 content. An active QR Code is one that a QR Code scanner is
 able to scan easily, prompting users to click on an external
@@ -184,58 +189,113 @@ information that the user is looking for such as restaurants
 menu, users portfolio, customers virtual card and voting
 information.
 
-Introduction to QR codes
-A Qr code is a 2-D square-shaped black and white bar code that can be read by smartphones. QR codes store information that can be used to make a call, send a message/email, open a website or even redirect a location.
+#### Introduction to QR codes
+> A Qr code is a 2-D square-shaped black and white bar code that can be read by smartphones. QR codes store information that can be used to make a call, send a message/email, open a website or even redirect a location.
 
-A QR Code can store up to 4296 characters or 7089 digits in a single code thus making it viable to hold large amounts of content. An active QR Code is one that a QR Code scanner is able to scan easily, prompting users to click on an external link upon scanning. The external link delivers relevant information that the user is looking for such as restaurants menu, users portfolio, customers virtual card and voting information.
+> A QR Code can store up to 4296 characters or 7089 digits in a single code thus making it viable to hold large amounts of content. An active QR Code is one that a QR Code scanner is able to scan easily, prompting users to click on an external link upon scanning. The external link delivers relevant information that the user is looking for such as restaurants menu, users portfolio, customers virtual card and voting information.
 
 
-What can QR codes be used for?
+#### What can QR codes be used for?
 
-URL – This feature converts a URL into a QR code.
+###### URL 
+* This feature converts a URL into a QR code.
 
-WiFi Credentials – Using this feature, there’s no need
+###### WiFi Credentials 
+* Using this feature, there’s no need
 to type passwords as you can connect directly to the
 internet by simply scanning the QR code.
 
-App – App Store QR codes are QR codes that redirect
+###### App 
+* App Store QR codes are QR codes that redirect
 users to an app to download your app right away. This
 will redirect users to different URLs based on their
 smartphone operating software (Android OS or Apple’s iOS)
 
-Customer Survey – You can use a QR code
+###### Customer Survey 
+* You can use a QR code
 to link a survey form and get the satisfaction rating
 and opinions of your customers.
 
-Retails – The QR code that will give further details to
+######  Retails 
+* The QR code that will give further details to
 your customers about the products you offer.
 Payments – QR codes make payment for goods and services
 easy.
 
-Digital showroom – Image QR codes are used to show
+ 
+###### Digital showroom 
+* Image QR codes are used to show
 off your work and offer call-to-action buttons (direct
 call, direct email or SMS, IG, WhatsApp, etc) to enable
 a potential customer to book appointments or contact your
 business or follow your business online.
 
-Show a Welcome Message – These QR Codes encode text and
+###### Show a Welcome Message 
+* These QR Codes encode text and
 the message is shown instantly to the user when they scan
 the code.
 
-Virtual Business Cards – This allows one to share his/her
+###### Virtual Business Cards 
+* This allows one to share his/her
 contact details and business details on the go. It allows
 for easy transmission straight into the input fields of
 phones.
 
-Do QR codes expire?
-No, QR codes do not have an expiration date. The QR code
+####  Do QR codes expire?
+> No, QR codes do not have an expiration date. The QR code
 has a Quick Link behind it. As long as the Quick Link is
 active, the QR code will continue to work.
 
-How much text can a QR code hold?
-QR Code is capable of handling all types of data, such as
+#### How much text can a QR code hold?
+> QR Code is capable of handling all types of data, such as
 numeric and alphabetic characters, Kanji, Kana, Hiragana,
 symbols, binary, and control codes. Up to 7,089 characters
 can be encoded in one symbol.
 
-#Django-Authentication
+## Project Installation
+
+* Note this project has a .env file with the secret key
+
+
+The first thing to do is to clone the repository:
+
+```sh
+$ git clone https://github.com/zuri-training/Qr-gen-proj-team57.git
+$ cd Qr-gen-proj-team57
+```
+
+Create a virtual environment to install dependencies in and activate it:
+
+```sh
+$ py -3 -m venve .venv
+$ .venv\Scripts\activate.bat
+$ code .
+$ .venv\Scripts\Activate.ps1
+```
+
+
+
+Then install the dependencies:
+
+```sh
+(venv)$ pip install -r requirements.txt
+```
+Note the `(venv)` in front of the prompt. This indicates that this terminal
+session operates in a virtual environment .
+
+Once `pip` has finished downloading the dependencies:
+```sh
+(venv)$ cd Backend
+(venv)$ python manage.py runserver
+```
+And navigate to `http://127.0.0.1:8000/`.
+
+## Features
+* User authentication and authorization
+* User tracking and history
+* Responsive contact us form
+* Google sign-in authorization
+* User profile with change  profile image ,email and password
+* Forgot passoword and Reset
+* Qrcode generation and download (png,jpeg,pdf)
+* Share  button to social media accounts

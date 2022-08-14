@@ -1,4 +1,4 @@
-Ki![logo](assets/logo.png)
+![logo](assets/logo.png)
 
 ## Overview
 * A web app to  help users generate QrCodes from their input.

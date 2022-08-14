@@ -49,9 +49,12 @@
     {% endfor %}
           </nav>
           <div class="btns">
+            {% if request.user.is_authenticated %}
+            <a href="/signout"><button class="white-btn">Log out</button></a>
+            {% else %}
             <a href="/signin"><button class="white-btn">Log In</button></a>
             <a href="/register"><button class="blue-btn">Register</button></a>
-            <!-- <a href="/signout"><button class="white-btn">Log out</button></a>-->
+            {% endif %}
             
           </div>
         </div>
@@ -60,6 +63,7 @@
             <div class="bluebtn">
                 <a href="/register"><button class="blue-btn">Register</button></a>
             </div>
+            <a href="/signin"><button class="blue-btn">Login</button></a>
             <div class="logo-div">
                 <img style="align-items: left"src="{% static '/images/Bluelogo.png' %}" alt=""class="logo"/>
             </div>

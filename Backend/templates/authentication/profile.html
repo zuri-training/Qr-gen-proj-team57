@@ -2,6 +2,21 @@
 	{% load crispy_forms_tags %}
 	{% block content %}
 	
+	{% load static %}
+	<link rel="stylesheet" href=" {%static '/css/dashboard.css' %}" />
+	<style>
+		.cancel-btn {
+  background-color: gray;
+  color: white;
+  padding: 7px 15px;
+  text-decoration: none;
+  border-radius: 5px;
+}
+
+.cancel-btn:hover{
+	background-color: red;
+}
+	</style>
 	<!--User page HTML-->
 	<div class="content-section">
 		<div class="media">
@@ -19,7 +34,12 @@
 				{{ p_form|crispy }}
 			</fieldset>
 			<div class="form-group">
-				<button class="btn btn-outline-info" type="submit">Update</button>
+				<button class="btn btn-outline-info" type="submit">Update</button>&nbsp;&nbsp;
+				<a class="cancel-btn" href="dashboard">Cancel</a>&nbsp;&nbsp;
+				<a href="/">
+					<button class="dashboard-sidebar__button__home">
+					  <img src="{% static '/images/home.png' %}" alt="home" />
+					  Back to Home</button> </a> 
 			</div>
 		</form>
 	</div>

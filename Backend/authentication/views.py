@@ -11,6 +11,10 @@ from django.db.models.query_utils import Q
 from django.utils.http import urlsafe_base64_encode
 from django.contrib.auth.tokens import default_token_generator
 from django.utils.encoding import force_bytes
+from .decorators import unauthenticated_user, allowed_user
+from django.contrib.auth.decorators import login_required
+from .forms import Profile
+from .models import Contact
 
 import logging, traceback
 
@@ -24,6 +28,7 @@ logger = logging.getLogger('django')
 def home(request):
     return render(request, 'authentication/index.html')
 
+@unauthenticated_user
 def register(request):
     if request.method == 'POST':
         username = request.POST['username']
@@ -64,6 +69,7 @@ def register(request):
     
     return render(request, 'authentication/register.html')
 
+
 def signin(request):
     if request.method == 'POST':
         username = request.POST['username']
@@ -86,7 +92,7 @@ def signin(request):
 
     return render(request, 'authentication/signin.html')
 
-
+@login_required
 def signout(request):
     logout(request)
     messages.success(request, "logout successful")
@@ -94,7 +100,7 @@ def signout(request):
     return redirect('home')
 
  
-
+@login_required
 def contact(request):
 	if request.method == 'POST':
 		form = ContactForm(request.POST)
@@ -120,6 +126,16 @@ def contact(request):
 	return render(request, 'authentication/contact.html', {'form':form})
 
 
+# def contact(request):
+# 	if request.method=='POST':
+# 		form = ContactForm(request.POST)
+# 		first_name=request.POST['first_name']
+# 		email=request.POST['email_address']
+# 		message=request.POST['message']
+# 		contact=Contact.objects.create(first_name=first_name,email_address=email,message=message)
+# 		messages.success(request,'Data has been submitted')
+# 	form = ContactForm()
+# 	return render(request,'authentication/contact.html',{'form':form})
 
 
 def password_reset_request(request):
@@ -161,18 +177,19 @@ def faq(request):
     return render(request, 'authentication/faq.html')
 
 
-
+@login_required
 def profile(request):
+	profile,created = Profile.objects.get_or_create(user=request.user)
 	if request.method == 'POST':
 		u_form = UserUpdateForm(request.POST, instance=request.user)
 		p_form = ProfileUpdateForm(request.POST,
                                    request.FILES,
-                                   instance=request.user.profile)
+                                   instance=profile)
 		if u_form.is_valid() and p_form.is_valid():
 			u_form.save()
 			p_form.save()
 			messages.success(request, f'Your account has been updated!')
-			return redirect('profile')
+			return redirect('home')
 
 	else:
 		u_form = UserUpdateForm(instance=request.user)
@@ -183,35 +200,50 @@ def profile(request):
         'p_form': p_form
     }
 
-	return render(request, 'authentication/profile.html')
+	return render(request, 'authentication/profile.html', context)
 
 # class PostDetailView(HitCountDetailView):
 #     model = post
 #     template_name = 'authentication/signin.html'
 #     slug_field = 'slug'
 #     count_hit = True
+
+@login_required
 def api(request):
     return render(request, 'authentication/api.html')
 
+
+@login_required
 def dashboard(request):
     return render(request, 'authentication/dashboard.html')
 
 
+@login_required
 def services(request):
     return render(request, 'authentication/services.html')
 
+
+@login_required
 def setting(request):
     return render(request, 'authentication/setting.html')
 
+
+@login_required
 def setting1(request):
     return render(request, 'authentication/setting1.html')
 
+
+@login_required
 def setting2(request):
     return render(request, 'authentication/setting2.html')
 
+
+@login_required
 def setting3(request):
     return render(request, 'authentication/setting3.html')
 
+
+@login_required
 def tutorial(request):
     return render(request, 'authentication/tutorial.html')
 

@@ -1,12 +1,16 @@
-![logo](assets/logo.png)
+
+<div style="text-align:center;">
+        <img src="http://assets/logo.png" alt="Logo" width="300" height="250">
+</div>
+
 
 ## Overview
 * A web app to  help users generate QrCodes from their input.
 * PROJECT NAME: `GENCODE`
 * Project languages: 
-> Backend: `JavaScript`,`Django(python)`
-> Frontend: `HTML5`, `CSS3`,`AJAX`. `Javascript`, `Bootstrap`
-> UI/UX - Certified✅
+> * Backend: `JavaScript`,`Django(python)`
+> * Frontend: `HTML5`, `CSS3`,`AJAX`. `Javascript`, `Bootstrap`
+> * UI/UX - Certified✅
 
 ## Table of Contents
 
@@ -22,8 +26,9 @@
 * [Relevant Links](#relevant-links)
 * [API Details](#api-details)
 * [Questions and Answers](#questions-and-answers)
+* [Project Architecture](#project-architecture)
 * [Project installation](#project-installation)
-* [Featues](#features)
+* [Project Featues](#project-features)
 
 
 ## Acknowledgements
@@ -139,7 +144,7 @@ __Designers__ <br/>
 <br/>
 
 __BackEnd Contributors__ <br/>
-* Lilian Wanjiku[lilian wanjiku](https://github.com/Lilywd)
+* Lilian Wanjiku [github link](https://github.com/Lilywd)
 
 * Precious Kingsley Okolaa
 
@@ -156,7 +161,7 @@ __FrontEnd Contributors__ <br/>
 
 * Aderibigbe Omolola(Dahrah)
 
-* Daniel Chibueze Ekeleme[Daniel](https://github.com/DanitoSharp)
+* Daniel Chibueze Ekeleme [github link](https://github.com/DanitoSharp)
 
 * Precious Kingsley Okolaa
 
@@ -170,10 +175,17 @@ __FrontEnd Contributors__ <br/>
 * BackEnd Schema 
 * Design Documentation
 
+<details>
 
-## API Details
+<summary> 
+
+## API Details 
+
+</summary>
+
 
 ## Questions and Answers
+
 #### What is a QR code?
 > A Qr code is a 2-D square-shaped black and white bar code
 that can be read by smartphones. QR codes store
@@ -194,8 +206,14 @@ information.
 
 > A QR Code can store up to 4296 characters or 7089 digits in a single code thus making it viable to hold large amounts of content. An active QR Code is one that a QR Code scanner is able to scan easily, prompting users to click on an external link upon scanning. The external link delivers relevant information that the user is looking for such as restaurants menu, users portfolio, customers virtual card and voting information.
 
+<details>
+<summary>
 
 #### What can QR codes be used for?
+
+</summary>
+
+
 
 ###### URL 
 * This feature converts a URL into a QR code.
@@ -252,6 +270,62 @@ numeric and alphabetic characters, Kanji, Kana, Hiragana,
 symbols, binary, and control codes. Up to 7,089 characters
 can be encoded in one symbol.
 
+
+</details>
+
+</details>
+
+
+
+## Project Architecture
+ 
+*  This project uses Monolith(Django Templating) architecture.The 
+Structure is as follows:
+
+*
+*  ###### assests folder [link](https://github.com/zuri-training/Qr-gen-proj-team57/tree/main/assets) 
+Contains the logo image used for this projects repository
+
+*  ###### Backend folder [link](https://github.com/zuri-training/Qr-gen-proj-team57/tree/main/Backend)  
+The main folder containing this projects work,its contents are:
+
+> *  ###### authentication [link](https://github.com/zuri-training/Qr-gen-proj-team57/tree/main/Backend/authentication) 
+ this  is team57's django app created with the command  `python manage.py startapp` .
+
+> *  ###### history [link](https://github.com/zuri-training/Qr-gen-proj-team57/tree/main/Backend/history) 
+ Stores user history.
+
+> *  ###### log [link](https://github.com/zuri-training/Qr-gen-proj-team57/tree/main/Backend/log) 
+ Is used to track users that login,register and log out,also logs errors if any.
+
+> *  ###### media [link](https://github.com/zuri-training/Qr-gen-proj-team57/tree/main/Backend/media) 
+ Stores the users profile pictures as well as the default profile image before the user sets one.
+
+> *  ###### qrcodegen [link](https://github.com/zuri-training/Qr-gen-proj-team57/tree/main/Backend/qrcodegen) 
+ This  is team57's django project created with the command  `django-admin startproject` .
+
+> *  ###### static [link](https://github.com/zuri-training/Qr-gen-proj-team57/tree/main/Backend/static) 
+ Contains team57's CSS Images and Javascript files.
+
+> *  ###### templates/authentication [link](https://github.com/zuri-training/Qr-gen-proj-team57/tree/main/Backend/templates/authentication) 
+ Comtains team57's HTML files.
+
+*  ###### contribution list [link](https://github.com/zuri-training/Qr-gen-proj-team57/tree/main/contribution%20list) 
+Contribution file for each member of team 57
+
+*  ###### others [link](https://github.com/zuri-training/Qr-gen-proj-team57/tree/main/others) 
+Contains extra css html files yet to be intergrated
+
+*  ###### .gitignore[link](https://github.com/zuri-training/Qr-gen-proj-team57/tree/main/.gitignore) 
+List of files to be ignored
+
+
+*  ###### requirements.txt [link](https://github.com/zuri-training/Qr-gen-proj-team57/tree/requirements.txt) 
+Contains the list of dependencies for this project.
+
+
+
+
 ## Project Installation
 
 * Note this project has a .env file with the secret key
@@ -290,7 +364,9 @@ Once `pip` has finished downloading the dependencies:
 ```
 And navigate to `http://127.0.0.1:8000/`.
 
-## Features
+
+
+## Project Features
 * User authentication and authorization
 * User tracking and history
 * Responsive contact us form
@@ -298,4 +374,10 @@ And navigate to `http://127.0.0.1:8000/`.
 * User profile with change  profile image ,email and password
 * Forgot passoword and Reset
 * Qrcode generation and download (png,jpeg,pdf)
-* Share  button to social media accounts
+* Share  to social media accounts
+* 
+
+
+
+
+

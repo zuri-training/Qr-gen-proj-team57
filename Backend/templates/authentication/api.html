@@ -6,6 +6,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Gen Code API</title>
     {% load static %}
+    <link rel="stylesheet" href=" {%static '/css/dashboard.css' %}" />
+    <link rel="stylesheet" href="{% static 'css/index.css' %}">
     <link
       rel="stylesheet"
       href="https://fonts.googleapis.com/css?family=Outfit"
@@ -35,6 +37,11 @@
     </style>
   </head>
   <body>
+    <a href="/">
+      <button class="dashboard-sidebar__button__home">
+        <img src="{% static '/images/home.png' %}" alt="home" />
+        Back to Home</button> </a> 
+  </div>
   <main>
       <div class="allbox">
       <div class="textbox">

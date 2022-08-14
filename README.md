@@ -1,4 +1,4 @@
-![logo](assets/logo.png)
+Ki![logo](assets/logo.png)
 
 ## Overview
 * A web app to  help users generate QrCodes from their input.
@@ -317,7 +317,7 @@ Contains extra css html files yet to be intergrated
 List of files to be ignored
 
 
-*  ### requirements.txt [link](https://github.com/zuri-training/Qr-gen-proj-team57/tree/requirements.txt) 
+*  ### requirements.txt [link](https://github.com/zuri-training/Qr-gen-proj-team57/tree/main/requirements.txt) 
 Contains the list of dependencies for this project.
 
 

@@ -89,7 +89,13 @@ verification processes in the website would have full access to: <br/>
 * Mobile Phones
 * Tablets
 
+<details>
+
+<summary>
+
 ## Contributors
+
+</summary>
 __Team Administrators__ <br/>
 Ajakaye Oluwafemi Dunsin(Team-lead)
 Wahab Ibrahim(Assistant)
@@ -164,6 +170,8 @@ __FrontEnd Contributors__ <br/>
 * Ofe Osigbemhe
 
 * Abiodun Ade
+
+</details>
 
 ## Relevant Links
 * Figma Design
@@ -282,46 +290,35 @@ Structure is as follows:
 *  #### assests folder [link](https://github.com/zuri-training/Qr-gen-proj-team57/tree/main/assets) 
 Contains the logo image used for this projects repository
 
-*  ## Backend folder [link](https://github.com/zuri-training/Qr-gen-proj-team57/tree/main/Backend)  
-The main folder containing this projects work,its contents are:
-
-> *  ### authentication [link](https://github.com/zuri-training/Qr-gen-proj-team57/tree/main/Backend/authentication) 
+*  ### authentication [link](https://github.com/zuri-training/Qr-gen-proj-team57/tree/main/authentication) 
  this  is team57's django app created with the command  `python manage.py startapp` .
-
-> *  #### history [link](https://github.com/zuri-training/Qr-gen-proj-team57/tree/main/Backend/history) 
- Stores user history.
-
-> *  ### log [link](https://github.com/zuri-training/Qr-gen-proj-team57/tree/main/Backend/log) 
- Is used to track users that login,register and log out,also logs errors if any.
-
-
-> *  ### media [link](https://github.com/zuri-training/Qr-gen-proj-team57/tree/main/Backend/media) 
- Stores the users profile pictures as well as the default profile image before the user sets one.
-
-> *  ### qrcodegen [link](https://github.com/zuri-training/Qr-gen-proj-team57/tree/main/Backend/qrcodegen) 
- This  is team57's django project created with the command  `django-admin startproject` .
-
-> *  ### static [link](https://github.com/zuri-training/Qr-gen-proj-team57/tree/main/Backend/static) 
- Contains team57's CSS Images and Javascript files.
-
-> *  ### templates/authentication [link](https://github.com/zuri-training/Qr-gen-proj-team57/tree/main/Backend/templates/authentication) 
- Comtains team57's HTML files.
 
 *  ### contribution list [link](https://github.com/zuri-training/Qr-gen-proj-team57/tree/main/contribution%20list) 
 Contribution file for each member of team 57
 
+*  #### history [link](https://github.com/zuri-training/Qr-gen-proj-team57/tree/main//history) 
+ Stores user history.
+
+*  ### media [link](https://github.com/zuri-training/Qr-gen-proj-team57/tree/main/media) 
+ Stores the users profile pictures as well as the default profile image before the user sets one.
+
 *  ### others [link](https://github.com/zuri-training/Qr-gen-proj-team57/tree/main/others) 
 Contains extra css html files yet to be intergrated
+
+*  ### qrcodegen [link](https://github.com/zuri-training/Qr-gen-proj-team57/tree/main/qrcodegen) 
+ This  is team57's django project created with the command  `django-admin startproject` .
+
+*  ### static [link](https://github.com/zuri-training/Qr-gen-proj-team57/tree/main/static) 
+ Contains team57's CSS Images and Javascript files.
+
+ *  ### templates/authentication [link](https://github.com/zuri-training/Qr-gen-proj-team57/tree/main/templates/authentication) 
+ Comtains team57's HTML files.
 
 *  ### .gitignore[link](https://github.com/zuri-training/Qr-gen-proj-team57/tree/main/.gitignore) 
 List of files to be ignored
 
-
 *  ### requirements.txt [link](https://github.com/zuri-training/Qr-gen-proj-team57/tree/main/requirements.txt) 
 Contains the list of dependencies for this project.
-
-
-
 
 ## Project Installation
 
@@ -361,8 +358,6 @@ Once `pip` has finished downloading the dependencies:
 ```
 And navigate to `http://127.0.0.1:8000/`.
 
-
-
 ## Project Features
 * User authentication and authorization
 * User tracking and history
@@ -372,7 +367,6 @@ And navigate to `http://127.0.0.1:8000/`.
 * Forgot passoword and Reset
 * Qrcode generation and download (png,jpeg,pdf)
 * Share  to social media accounts
-* 
 
 
 
